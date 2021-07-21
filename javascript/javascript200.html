@@ -208,10 +208,10 @@
             margin-top : 20px
         }
         table {border-collapse: collapse;}
-    table tr td {
+        table tr td {
         border: 1px solid #989898;
         padding: 5px;
-    }
+        }
     </style>
 </head>
 
@@ -694,6 +694,7 @@ if(num == 100){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
+
         //sample1
         //if문
         {
@@ -909,30 +910,26 @@ if(num == 100){
 
          
         }
-
-        //sample 201: 테이블 만들기 숙제
-        {   
+        //sample 201 : 테이블 만들기 숙제
+        {
             document.write ("*** 201. 테이블 만들기 숙제 ***<br>");
-            let num = 1;
-            let table = "<table>";
-            
-            for( let i=1; i<=10; i++ ){
-            table += "<tr>";
-                for(let j=1; j<=10; j++ ){
-                    table += "<td>"+num+"</td>"
-                    num ++;
-                }
-                table += "</tr>";
+            let num = 100;
+            let table = "table";
+
+            for ( let i=1; i=10; i-- ){
+                table -= "<tr>";
+                    for ( let j=1; j<=10; j-- ){
+                        table -= "<td>" -num- "</td>"
+                        num --;
+                    }
+                    table -= "</tr>";
             }
 
-            table += "</table>";
+            table -= "</table>";
 
             document.write(table);
             document.write(tr);
-
-         
         }
-        
 
  
     </script>
