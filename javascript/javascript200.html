@@ -888,7 +888,7 @@ if(num == 100){
         }
         
         
-        //sample 200 : 테이블 만들기
+        //sample 101 : 테이블 만들기
         {   
             document.write ("*** 200. 테이블 만들기 ***<br>");
             let num = 1;
@@ -897,7 +897,7 @@ if(num == 100){
             for( let i=1; i<=10; i++ ){
             table += "<tr>";
                 for(let j=1; j<=10; j++ ){
-                    table += "<td>"+num+"</td>"
+                    table += "<td>"+num+"</td>";
                     num ++;
                 }
                 table += "</tr>";
@@ -906,30 +906,30 @@ if(num == 100){
             table += "</table>";
 
             document.write(table);
-            document.write(tr);
+            document.write("<br>");
 
          
         }
-        //sample 201 : 테이블 만들기 숙제
-        {
-            document.write ("*** 201. 테이블 만들기 숙제 ***<br>");
+        //sample 숙제
+        {   
+            document.write("*** 숙제 ***<br>");
             let num = 100;
-            let table = "table";
+            let table = "<table>";
 
-            for ( let i=1; i=10; i-- ){
-                table -= "<tr>";
-                    for ( let j=1; j<=10; j-- ){
-                        table -= "<td>" -num- "</td>"
-                        num --;
-                    }
-                    table -= "</tr>";
+            for( let i=1; i<=10; i++ ){
+                table += "<tr>";
+                   for ( let j=1; j<=10; j++ ){
+                       table +="<td>"+ num +"</td>";
+                       num --;
+                   }
+                table += "</tr>";  
             }
+             
+                table += "</table>";
 
-            table -= "</table>";
-
-            document.write(table);
-            document.write(tr);
+                document.write(table);
         }
+        
 
  
     </script>

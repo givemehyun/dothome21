@@ -263,7 +263,6 @@
     document.write(y);
     document.write(z);
 }
-
 </code></pre>
         </div>
     </div>
@@ -287,7 +286,6 @@
     document.write(y);
     document.write(z);
 }
-
 </code></pre>
         </div>
     </div>
@@ -436,7 +434,6 @@
     document.write(obj[1],);
     document.write(obj[2],);
 }
-         
 </code></pre>
         </div>
     </div>
@@ -458,7 +455,6 @@
     document.write(obj.b,);
     document.write(obj.c,);
 }
-
 </code></pre>
         </div>
     </div>
@@ -473,6 +469,7 @@
     obj.a = 100;
     obj.b = 200;
     obj.c = "javascript";
+
     document.write("*** 11. 객체 ***");
     document.write(obj.a,);
     document.write(obj.b,);
@@ -488,6 +485,7 @@
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     const obj = {a:100, b:200, c:"javascript"};
+    
     document.write("*** 12. 객체 ***");
     document.write(obj.a,);
     document.write(obj.b,);
@@ -504,8 +502,8 @@
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     const obj = [
-                {a:100},{b:200},
-                {c:"javascript"}
+        {a:100},{b:200},
+        {c:"javascript"}
     ];
 
     document.write("*** 13. 객체 ***");
@@ -513,7 +511,6 @@
     document.write(obj[0].b,);
     document.write(obj[1].c,);
 }
-    
 </code></pre>
         </div>
     </div>
@@ -537,7 +534,6 @@
     document.write(obj.b[1],);
     document.write(obj.c,);
 }
-    
 </code></pre>
         </div>
     </div>
@@ -558,9 +554,7 @@
     document.write(obj.a,);
     document.write(obj.b,);
     document.write(obj.c,);
-
 }
-
 </code></pre>
         </div>
     </div>
@@ -572,7 +566,7 @@
         <h2>16. 객체 : 데이터 저장 (키와 값) : 표현 방법7 : 객체 속에 변수</li> <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-const obj = {
+const obj ={
     a: 100,
     b:[200,300],
     c: "javascript",
@@ -834,7 +828,7 @@ const obj = {
                 e: function() {
                     document.write( obj.c + "가 실행되었습니다.<br>");
                 },
-                f:function() {
+                f: function() {
                     document.write ( this.c + "가 실행되었습니다.<br>")
                 },
 
