@@ -911,10 +911,28 @@ if(num == 100){
         }
 
         //sample 201: 테이블 만들기 숙제
-        {
-            document.write ("***201. 테이블 만들기 숙제 ***<br>")
-        }
+        {   
+            document.write ("*** 201. 테이블 만들기 숙제 ***<br>");
+            let num = 1;
+            let table = "<table>";
             
+            for( let i=1; i<=10; i++ ){
+            table += "<tr>";
+                for(let j=1; j<=10; j++ ){
+                    table += "<td>"+num+"</td>"
+                    num ++;
+                }
+                table += "</tr>";
+            }
+
+            table += "</table>";
+
+            document.write(table);
+            document.write(tr);
+
+         
+        }
+        
 
  
     </script>
