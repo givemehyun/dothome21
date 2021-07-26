@@ -232,6 +232,9 @@
         .ol4::before {
             content: "데이터 제어하기 : ";
         }
+        .ol5::before {
+            content: "데이터 연습하기 : ";
+        }
     </style>
 </head>
 
@@ -244,7 +247,10 @@
         <li><a href="javascript100.html">객체(object)</a></li>
     </ol>
     <ol class="ol2">
-        <li><a href="javascript500.html">데이터</a></li>
+        <li><a href="javascript500.html">변수</a></li>
+        <li><a href="javascript500.html">상수</a></li>
+        <li><a href="javascript500.html">배열</a></li>
+        <li><a href="javascript500.html">객체</a></li>
     </ol>
     <ol class="ol3">
         <li><a href="javascript300.html">함수(function)</a></li>
@@ -253,7 +259,7 @@
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
-    <ol>
+    <ol class="ol5">
         <li><a href="javascript400.html">알고리즘</a></li>
     </ol>
 
@@ -530,13 +536,11 @@
         document.write(array);
     });
 }
-
 </code></pre>
         </div>
     </div>
     <hr>
-    <hr>
-    <hr>
+
     <div id="sample12" class="sample">
         <h2>12. for of문  <span class="dot"></span></h2>
         <div class="code">
@@ -602,18 +606,16 @@
 
     {
 
-    for (let i=1; i<=20; i++){
+    for (let i=1; i&lt;=20; i++){
         document.write(i);
         if( i ==10){
             break;
         }
     }
 }
-
 </code></pre>
         </div>
     </div>
-    <hr>
     <hr>
     <div id="sample15" class="sample">
         <h2>15.continue문  <span class="dot"></span></h2>
@@ -632,7 +634,6 @@
         }
     }   document.write(num);
 }
-
 </code></pre>
         </div>
     </div>
@@ -646,130 +647,7 @@
             padding: 5px;
         }
     </style>
-    <table>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-        </tr>
-
-    </table>
-
+   
     <hr>
     <hr>
     <hr>
@@ -942,7 +820,7 @@
                     document.write(j + ". 반복문이(제이) 실행되었습니다.<br>");
                 }
             }
-            document.write("<br><br><br>");
+            document.write("<br><br>");
         }
 
         //sample11
@@ -1014,7 +892,7 @@
             b: 200,
             c: 300,
             d: 400,
-            e: 500
+            e: 500,
         }
         for( let key in obj ){
             document.write( key, "<br>");
@@ -1044,7 +922,7 @@
                 break;
             }
         }
-        document.write("<br>");
+        document.write("<br><br>");
     }
     
      //sample15

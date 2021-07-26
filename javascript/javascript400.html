@@ -230,6 +230,9 @@
         .ol4::before {
             content: "데이터 제어하기 : ";
         }
+        .ol5::before {
+            content: "데이터 연습하기 : ";
+        }
     </style>
 </head>
 
@@ -242,7 +245,10 @@
         <li><a href="javascript100.html">객체(object)</a></li>
     </ol>
     <ol class="ol2">
-        <li><a href="javascript500.html">데이터</a></li>
+        <li><a href="javascript500.html">변수</a></li>
+        <li><a href="javascript500.html">상수</a></li>
+        <li><a href="javascript500.html">배열</a></li>
+        <li><a href="javascript500.html">객체</a></li>
     </ol>
     <ol class="ol3">
         <li><a href="javascript300.html">함수(function)</a></li>
@@ -251,20 +257,20 @@
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
-    <ol>
+    <ol class="ol5">
         <li><a href="javascript400.html">알고리즘</a></li>
     </ol>
     <h2 class="mt20">알고리즘</h2>
     <ul>
-        <li>01. 1부터 100까지 출력하기</li>
-        <li>02. 1부터 100까지 출력하기 : 짝수만</li>
-        <li>03. 1부터 100까지 출력하기 : 5의 배수만</li>
-        <li>04. 1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력</li>
-        <li>05. 1부터 100까지의 합 출력하기 </li>
-        <li>06. 구구단 출력하기</li>
-        <li>06. 테이블 만들기1</li>
-        <li>07. 테이블 만들기2</li>
-        <li>08. 테이블 만들기3 - 짝수만</li>
+        <li<a href="#sample1">01. 1부터 100까지 출력하기</li>
+        <li<a href="#sample2">02. 1부터 100까지 출력하기 : 짝수만</a></li>
+        <li><a href="#sample3">03. 1부터 100까지 출력하기 : 5의 배수만</a></li>
+        <li><a href="#sample4">04. 1부터 100까지 출력하기 : 짝수는 빨간색, 홀수는 파란색 출력</a></li>
+        <li><a href="#sample5">05. 1부터 100까지의 합 출력하기 </a></li>
+        <li><a href="#sample6">06. 구구단 출력하기</a></li>
+        <li><a href="#sample7">07. 테이블 만들기1</a></li>
+        <li><a href="#sample8">08. 테이블 만들기2</a></li>
+        <li><a href="#sample9">09. 테이블 만들기3 - 짝수만</a></li>
     </ul>
 
     <hr>
@@ -273,10 +279,11 @@
         <h2>01. 1부터 100까지 출력하기<span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-    for (let i = 1; i &lt;= 100; i++) {
-        document.write(i);
+    document.write("*** 01. 1부터 100까지 출력 ***<br>");
+
+    for(let i=1; i&lt;=100; i++){
+        document.write(i, " &nbsp;");
     }
-    document.write("<br><br>");
 }
 </code></pre>
         </div>
@@ -288,12 +295,9 @@
         <h2>02. 1부터 100까지 출력하기 : 짝수만 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-    // for(let i=1; i&lt;100; i++){
-    //     if(i % 2 == 0) {
-    //         document.write(i);
-    //     }
-    // }
-    for(let i=2; ii&lt;100; i+=2){
+    document.write("*** 02. 1부터 100까지 출력(짝수만 출력) ***");
+
+    for(let i=2; i&lt;100; i+=2){
         document.write(i);
     }
 }
@@ -307,8 +311,7 @@
     <div id="sample3" class="sample">
         <h2>03. 1부터 100까지 출력하기 : 5의 배수만 <span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">
-{
+            <pre class="line-numbers"><code class="language-js">{
     for(let i=1; i&lt;100; i++){
         if(i % 5 == 0) document.write(i);
     }
@@ -327,13 +330,11 @@
     document.write ("***-4. 1부터 100까지 출력 (짝수는 빨간색, 홀수는 파란색 출력 ***<br>")
     for(let i=1; i&lt;=100; i++){
         if ( i % 2 == 0){
-            document.write("&lt;span style='color:red'&gt;" + i + "&lt;/span&lt;");
+            document.write("&lt;span style='color:red'>" + i + "&lt;/span>");
         } else {
-            document.write("&lt;span style='color:blue'&gt;" + i + "&lt;/span&lt;");
+            document.write("&lt;span style='color:blue'>" + i + "&lt;/span>");
         }
     }
-
-    document.write("<br><br>")
 }
 </code></pre>
         </div>
@@ -391,12 +392,12 @@
 
     <hr>
 
-    <!-- //sample5 -->
-    <div id="sample4" class="sample">
-        <h2>06. 테이블 만들기1 <span class="dot"></span></h2>
+    <!-- //sample7 -->
+    <div id="sample7" class="sample">
+        <h2>07. 테이블 만들기1 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-    document.write("*** 06. 테이블 만들기1 *** ");
+    document.write("*** 07. 테이블 만들기1 *** ");
 
     let num = 1;
     let table = "&lt;table>";
@@ -412,7 +413,7 @@
 
     table += "&lt;/table&gt;";
 
-    document.write(table, "&lt;br&gt;");
+    document.write(table);
 }
 </code></pre>
         </div>
@@ -421,53 +422,52 @@
     <hr>
     <!-- //sample5 -->
     <div id="sample4" class="sample">
-        <h2>07. 테이블 만들기2 <span class="dot"></span></h2>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">
-{
-    document.write("*** 07. 테이블 만들기2 ***<br>");
-
-    let num = 100;
-    let table = "<table>";
-
-    for( let i=1; i<=10; i++ ){
-        table += "<tr>";
-        for( let j=1; j<=10; j++ ){
-            table += "<td>"+ num +"</td>";
-            num--;
-        }
-        table += "</tr>";
-    }
-
-    table += "</table>";
-
-    document.write(table, "<br>");
-}
-</code></pre>
-        </div>
-    </div>
-
-    <hr>
-    <!-- //sample5 -->
-    <div id="sample4" class="sample">
-        <h2>08. 테이블 만들기3 - 짝수만<span class="dot"></span></h2>
+        <h2>08. 테이블 만들기2 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-    document.write("*** 테이블 만들기3 ***<br>");
+    document.write("*** 08. 테이블 만들기2 ***");
+
+    let num = 100;
+    let table = "&lt;table&gt;";
+        
+    for( let i=1; i&lt;=10; i++ ){
+        table += "&lt;tr&gt;";
+        for(let j=1; j&lt;=10;j++ ){
+            table += "&lt;td&gt;" + num + "&lt;/td&gt;";
+            num --;
+        }
+        table += "&lt;/tr&gt;";
+    } 
+
+    table += "&lt;/table&gt;";
+
+    document.write(table);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+    <!-- //sample5 -->
+    <div id="sample4" class="sample">
+        <h2>09. 테이블 만들기3 - 짝수만<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    document.write("*** 테이블 만들기3 ***");
 
     let num = 0;
-    let table = "<table>";
+    let table = "&lt;table>";
 
-    for( let i=1; i<=10; i++ ){
-        table += "<tr>";
-        for( let j=1; j<=10; j++ ){
-            table += "<td>"+ num +"</td>";
+    for( let i=1; i&lt;=10; i++ ){
+        table += "&lt;tr>";
+        for( let j=1; j&lt;=10; j++ ){
+            table += "&lt;td>"+ num +"&lt;/td>";
             num++;
         }
-        table += "</tr>";
+        table += "&lt;/tr>";
     }
 
-    table += "</table>";
+    table += "&lt;/table>";
 
     document.write(table);
 }
