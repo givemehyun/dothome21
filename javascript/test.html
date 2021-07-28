@@ -88,8 +88,10 @@
                 for(var j=1; j<=9; j++){
                     var sum = i * j;
                     document.write(i + " * " + j + " = " + sum,"<br>");
+                }
 
-       }
+             }
+        }
        //반복문
        //구구단 5~8단
        {
@@ -98,6 +100,40 @@
                var sum = i * j;
                document.write(i+ "*"+j + "=" + sum, "<br>");
            }
+       }
+       //배열의 개수 구하기 
+       {
+           const num = [100, 200, 300, 400, 500];
+
+           document.write(num.length, "<br><br>");
+       }
+       //배열의 3번째 값만 출력
+       {
+            const num = [100, 200, 300, 400, 500];
+
+            document.write(num[2]);
+       }
+       //for문을 이용해서 모든 값을 출력
+       {
+        const num = [100, 200, 300, 400, 500]
+
+        for(let i = 0; i<num.length; i++ ){
+            document.write(num[i], "<br><br>")
+        }
+       }
+       //forEach문을 이용해서 모든 값을 출력
+       {
+        const num = [100, 200, 300, 400, 500];
+
+        document.write(num[0]);
+        document.write(num[1]);
+        document.write(num[2]);
+        document.write(num[3]);
+        document.write(num[4]);
+
+        for( let i = 0; i<num.length; i++){
+            document.write(num[i]);
+        }
        }
     </script>
 </body>
