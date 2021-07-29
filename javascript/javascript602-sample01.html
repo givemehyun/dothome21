@@ -1,88 +1,90 @@
-<!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS 속성 검색하기</title>
-    
     <style>
         @font-face {
-        font-family: 'GyeonggiBatang';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+            font-family: 'GyeonggiBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
+
         @font-face {
-        font-family: 'TmonMonsori';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
-        *{
+
+        * {
             margin: 0;
             padding: 0;
         }
-        img{
+
+        img {
             width: 100%;
         }
-        body{
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-        #wrap{
-            width: 100%;
-            height: 100vh;
-            background-image:url(img/search_bg.jpg);
+
+        body {
+            background-image: url(img/search_bg.jpg);
             background-size: cover;
             background-position: center bottom;
+            background-attachment: fixed;
         }
-        .girl{
+
+        .girl {
             width: 250px;
-            position: absolute;
+            position: fixed;
             bottom: -60px;
-            right: 20%;
+            right: 5%;
         }
-        .dog{
+
+        .dog {
             width: 150px;
-            position: absolute;
+            position: fixed;
             bottom: -40px;
-            left: 20%;
+            left: 5%;
         }
-        .board{
-            width: 60vw;
-            height: 500px;
-            background-color: #f1f3f6;
+
+        .board {
+            margin: 10vw;
+            width: 80vw;
+            background-color: #F1F3F6;
             border: 2px solid #000;
-            position: absolute;
-            left: 50%;
-            top: 50%;
             padding: 3%;
-            transform: translate(-50%, -50%);
             text-align: center;
+            box-sizing: border-box;
         }
-        .board h1{
+
+        .board h1 {
             font-family: 'TmonMonsori';
             color: #223547;
             font-size: 60px;
             margin-top: 10px;
             margin-bottom: 20px;
         }
+
         .board span {
             font-family: 'GyeonggiBatang';
             color: #223547;
             font-size: 20px;
         }
+
         .board .search label {
-            background-color: #bfe6fe;
             font-family: 'GyeonggiBatang';
-            font-size: 24px;
+            background-color: #BFE6FE;
+            font-size: 26px;
             padding: 10px 30px;
             border: 1px solid #000;
             border-radius: 40px;
+            display:none;
         }
-        .board .search input{
+
+        .board .search input {
             font-family: 'GyeonggiBatang';
             font-size: 24px;
             border: 1px solid #000;
@@ -90,180 +92,260 @@
             border-radius: 40px;
             outline: none;
         }
-        .board .list{
-            text-align: left;
-            margin-top: 20px;
-        }
-        .board .list ul{
 
+        .board .list {
+            text-align: left;
+            margin-top: 40px;
         }
+
         .board .list ul li {
             font-family: 'GyeonggiBatang';
             line-height: 1.6;
             list-style: none;
+            background-color: #BDD6E6;
             margin: 5px;
             padding: 5px 10px;
             border-radius: 4px;
-            background-color: #bdd6e6;
         }
-        @media (max-width: 800px){
-            .girl img{
+        .board .list ul li.hide {
+            display: none;
+        }
+        @media (max-width: 800px) {
+            .girl img {
                 right: 5%;
             }
-            .dog img{
+
+            .dog img {
                 left: 5%;
             }
-            .board{
+
+            .board {
                 width: 80vw;
                 padding: 5%;
             }
-            .board h1{
-                font-size: 40px;
+
+            .board h1 {
+                font-size: 30px;
                 margin-top: 5px;
             }
-            .board span{
+
+            .board span {
                 font-size: 18px;
             }
         }
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <div class="board">
-            <span>나에게 필요한!</span>
+            <span>속성 중에 첫 글자만 넣어주세요!</span>
             <h1>CSS 속성 검색하기</h1>
             <div class="search">
                 <label for="search-box">검색하기</label>
-                <input id="search-box" type="text" >
+                <input id="search-box" type="text">
             </div>
             <div class="list">
                 <ul>
-                    <li> a 태그는 다른 페이지 이동을 설정합니다.</li>
-                    <li> abbr 태그는 줄임말이나 머리글자를 표현하는데 사용합니다.</li>
-                    <li> accent-color 속성은 요소 액센트의 색상을 설정합니다.</li>
-                    <li> align-content 속성은 Flexbox의 가로축 또는 그리드의 블록 축을 따라 내용 항목 간 및 주변 공간의 분포를 설정합니다.</li>
-                    <li> acronym 태그는 줄임말이나 머리글자를 표현하는데 사용합니다.</li>
-                    <li> address 태그는 페이지의 연락처 정보를 정의하는데 사용합니다.</li>
-                    <li> applet 태그는 애플랫 요소를 정의합니다.</li>
-                    <li> area 태그는 이미지 맵의 영역을 정의합니다.</li>
-                    <li> article 태그는 문서내에 독립적인 컨텐츠를 정의합니다.</li>
-                    <li> aside 태그는 문서내에 사이드 컨텐츠를 정의합니다.</li>
-                    <li> audio 태그는 오디오 파일을 정의합니다..</li>
-                    <li> b 태그는 글씨를 두껍게 표현할 때 사용합니다.</li>
-                    <li> base 태그는 문서의 모든 URL의 기본이 되는 기본 URL을 설정합니다.</li>
-                    <li> basefont 태그는 문서의 기본 폰트, 사이즈, 종류를 설정합니다.</li>
-                    <li> bdi 태그는 텍스트의 출력 방향을 브라우저가 판단해 표현합니다.</li>
-                    <li>  bdo 태그는 텍스트의 방향을 설정합니다.</li>
-                    <li>  big 태그는 텍스트 크기를 크게해줍니다</li>
-                    <li>  blockquote 태그는 긴 문장의 인용문을 정의합니다.</li>
-                    <li>  blink 태그는 텍스트를 깜박이게 합니다.</li>
-                    <li> body 태그는 문서 본문에 해당하는 콘텐츠를 포함하는 영역입니다.</li>
-                    <li> br 태그는 텍스트를 줄바꿈 할 때 사용합니다.</li>
-                    <li> button 태그는 클릭 할 수 있는 버튼을 설정합니다.</li>
-                    <li> canvas 태그는 그림을 그리는 비트맵을 정의합니다.</li>
-                    <li> caption 태그는 table 요소의 제목을 설정합니다.</li>
-                    <li> center 태그는 텍스트를 가운데 정렬합니다.</li>
-                    <li> cite 태그는 작품의 제목을 정의합니다.</li>
-                    <li> code 태그는 컴퓨터 코드를 정의합니다.</li>
-                    <li> col 태그는 테이블 요소의 행을 나타냅니다.</li>
-                    <li> colgroup 태그는 테이블 요소의 행을 그룹화합니다.</li>
-                    <li> data 태그는 주어진 내용을 기계가 읽을 수 있도록 설정합니다.</li>
-                    <li> datalist 태그는 미리 정의된 옵션의 리스트를 보여줍니다.</li>
-                    <li> dd 태그는 설명 목록 요소의 설명을 정의합니다.</li>
-                    <li> del 태그는 문서 내에 삭제된 텍스트를 설정합니다.</li>
-                    <li> details 태그는 추가정인 정보를 보여주거나 숨기게 할 수 있습니다.</li>
-                    <li> dfn 태그는 전문적인 용어를 정의할 때 사용합니다.</li>
-                    <li> dir 태그는 디렉토리 제목을 나열하는데 사용합니다.</li>
-                    <li> div 태그는 문서의 섹션을 만들거나 영역을 나눌 때 사용합니다.</li>
-                    <li> dl>태그는 설명 목록을 정의합니다.</li>
-                    <li> dt>태그는 설명 목록의 용어 및 이름을 정의합니다.</li>
-                    <li> em>태그는 텍스트를 강조하는데 사용합니다.</li>
-                    <li> embed 태그는 외부 어플리케이션을 연결합니다.</li>
-                    <li> fieldset 태그는 폼 요소의 그룹 내부 영역을 설정합니다.</li>
-                    <li> figcaption 태그는 <figure> 요소의 제목을 정의합니다.</li>
-                    <li> figure 태그는 그림, 도표, 사진, 코드등의 주석으로 표시합니다.</li>
-                    <li> font 태그는 폰트의 크기, 색, 종류를 설정합니다.</li>
-                    <li> footer 태그는 사이트 푸터부분을 정의합니다.</li>
-                    <li> form 태그는 웹 서버에 정보를 제공하는 폼 컨트롤 유형을 정의합니다.</li>
-                    <li> frame 태그는 HTML문서가 표시 될 수 있는 특정 영역을 설정합니다.</li>
-                    <li> frameset 태그는 프레임을 정의합니다.</li>
-                    <li> h1~h6 태그는 섹션의 제목을 정의합니다.</li>
-                    <li> head 태그는 사이트의 헤더 요소들을 정의합니다.</li>
-                    <li> header 태그는 소개 컨텐츠 및 네비게이션 링크를 포함한 섹션입니다.</li>
-                    <li> hgroup 태그는 제목 요소 그룹화를 정의합니다.</li>
-                    <li> figure 태그는 그림, 도표, 사진, 코드등의 주석으로 표시합니다.</li>
-                    <li> hr 태그는 문서의 주제를 분리할 때 사용합니다.</li>
-                    <li> html 태그는 HTML 문서의 루트를 나타냅니다.</li>
-                    <li> i 태그는 음성이나 분위기 등의 텍스트를 정의합니다.</li>
-                    <li> iframe 태그는 HTML문서 내에 다른 문서를 포함하는데 사용합니다.</li>
-                    <li> img 태그는 문서에 이미지를 표현할 때 사용합니다.</li>
-                    <li> input 태그는 데이터를 입력할 수 있는 폼 컨트롤을 정의합니다.</li>
-                    <li> ins 태그는 문서 내에 추가된 텍스트를 정의합니다</li>
-                    <li> kbd 태그는 키보드 입력을 정의합니다.</li>
-                    <li> keygen 태그는 보안키를 생성하고 컨트롤합니다.</li>
-                    <li> label 태그는 <input> 요소의 라벨을 지정합니다.</li>
-                    <li> legend 태그는 <fieldset> 요소의 영역 제목을 정의합니다.</li>
-                    <li> li 태그는 목록의 항목을 정의합니다.</li>
-                    <li> link 태그는 문서와 외부 파일 연결을 정의합니다.</li>
-                    <li> main 태그는 문서의 주요 콘텐츠를 정의합니다.</li>
-                    <li> map 태그는 이미지 맵을 정의합니다.</li>
-                    <li> mark 태그는 참고 표시를 정의합니다.</li>
-                    <li> marquee 태그는 텍스트의 스크롤과 움직임을 정의합니다.</li>
-                    <li> menu 태그는 메뉴 리스트를 정의합니다.</li>
-                    <li> menuitem 태그는 메뉴 리스트를 항목을 정의합니다.</li>
-                    <li> meta 태그는 문서에 대한 정보를 제공합니다.</li>
-                    <li> meter 태그는 범위를 측정하는 게이지 정보를 정의합니다.</li>
-                    <li> nav 태그는 네비게이션 링크를 정의합니다.</li>
-                    <li> noframes 태그는 프레임을 지원하지 않는 브라우저를 위한 대체 태그입니다.</li>
-                    <li> noscript 태그는 스크립트를 지원하지 않는 브라우저를 위한 대체 태그입니다.</li>
-                    <li> object 태그는 문서내에 포함된 멀티미디어 요소를 정의합니다.</li>
-                    <li> ol 태그는 순서가 있는 목록을 정의합니다.</li>
-                    <li> optgroup 태그는 <option> 리스트를 그룹화합니다.</li>
-                    <li> option 태그는 <select> 요소의 항목을 정의합니다.</li>
-                    <li> output 태그는 계산의 결과를 보여줍니다.</li>
-                    <li> p 태그는 문단을 정의합니다.</li>
-                    <li> param 태그는 <object> 의 매개변수를 정의합니다.</li>
-                    <li> picture 태그는 디바이스별 이미지를 제공합니다.</li>
-                    <li> pre 태그는 텍스트의 포맷을 정의합니다.
-                    <li> pregress 태그는 작업의 진행상태를 정의합니다.</li>
-                    <li> q 태그는 짧은 인용을 정의합니다</li>
-                    <li> rp 태그는 루비 주석을 괄호로 표현하기 위해서 사용합니다.</li>
-                    <li> rt 태그는 루비 주석에 대한 설명이나 발음을 정의합니다.</li>
-                    <li> rtc 태그는 루비 주석에 대한 설명이나 발음을 정의합니다.</li>
-                    <li> ruby 태그는 루비 주석을 정의합니다.</li>
-                    <li> s 태그는 정확하지 않거나 올바르지 않은 텍스트를 정의합니다.</li>
-                    <li> samp 태그는 컴퓨터 프로그램의 샘플 출력을 식별하기위한 요소입니다.</li>
-                    <li> script 태그는 스크립트를 정의하는데 사용합니다.</li>
-                    <li> section 태그는 주제별 그룹의 콘텐츠 섹션을 정의합니다.</li>
-                    <li> select 태그는 선택 목록을 정의합니다.</li>
-                    <li> small 태그는 저작권 또는 법적인 텍스트를 정의합니다.</li>
-                    <li> source 태그는 미디어 요소에 대한 소스를 지정하는데 사용합니다.</li>
-                    <li> span 태그는 인라인 요소 그룹화를 정의합니다.</li>
-                    <li> sticke태그는 취소선을 정의합니다.</li>
-                    <li> strong 태그는 중요한 의미를 갖는 텍스트를 정의합니다.</li>
-                    <li> style 태그는 문서에 대한 스타일 정보를 정의합니다.</li>
-                    <li> sub 태그는 텍스트 아래첨자를 정의합니다.</li>
-                    <li> summary 태그는 details 요소 내용에 대한 요약 또는 제목을 정의합니다.</li>
-                    <li> sup 태그는 텍스트 위첨자를 정의합니다.</li>
-                    <li> svg 태그는 SVG를 정의합니다.</li>
-                    <li> table 태그는 표를 정의합니다.</li>
-                    <li> tbody 태그는 표의 본문을 그룹화합니다.</li>
-                    <li> td 태그는 표의 셀을 정의합니다.</li>
-                    <li> template 태그는 템플릿을 표현합니다.</li>
-                    <li> textarea 태그는 여러줄의 텍스트를 편집할 수 있는 컨트롤을 정의합니다.</li>
-                    <li> tfoot 태그는 표의 푸터를 그룹화합니다.</li>
-                    <li> th 태그는 표의 행이나 열에 머리말을 정의합니다.</li>
-                    <li> thead 태그는 표의 헤더를 그룹화합니다.</li>
-                    <li> time 태그는 날자와 시간을 정의합니다.</li>
-                    <li> title 태그는 HTML문서의 타이틀을 정의합니다.</li>
-                    <li> tr 태그는 표의 행을 정의합니다.</li>
-                    <li> track 태그는 미디어 요소의 트랙을 지정합니다.</li>
-                    <li> tt 태그는 타자모양의 텍스트를 정의합니다.</li>
-                    <li> u 태그는 밑줄을 표시할 때 사용합니다.</li>
-                    <li> ul 태그는 순서가 없는 목록을 정의합니다.</li>
-                    <li> var 태그는 프로그램 코드에서 변수를 정의합니다.</li>
-                    <li> video 태그는 미디어 영상을 재생합니다.</li>
-                    <li> wbr 태그는 줄바꿈 할 위치를 정의합니다.</li>
+                    <li data-name="align-content" data-topic="레이아웃">align-content</li>
+                    <li data-name="align-items" data-topic="레이아웃">align-items</li>
+                    <li data-name="align-self" data-topic="레이아웃">align-self</li>
+                    <li data-name="all" data-topic="올">all </li>
+                    <li data-name="animation" data-topic="애니메이션">animation</li>
+                    <li data-name="animation-delay" data-topic="애니메이션">animation-delay</li>
+                    <li data-name="animation-direction" data-topic="애니메이션">animation-direction</li>
+                    <li data-name="animation-duration" data-topic="애니메이션">animation-duration</li>
+                    <li data-name="animation-fill-mode" data-topic="애니메이션">animation-fill-mode</li>
+                    <li data-name="animation-iteration-count" data-topic="애니메이션">animation-iteration-count</li>
+                    <li data-name="nimation-name" data-topic="애니메이션">animation-name</li>
+                    <li data-name="animation-play-state" data-topic="애니메이션">animation-play-state</li>
+                    <li data-name="animation-timing-function" data-topic="애니메이션">animation-timing-function</li>
+                    <li data-name="backface-visibility" data-topic="백">backface-visibility</li>
+                    <li data-name="background" data-topic="백그라운드">background</li>
+                    <li data-name="background-attachment" data-topic="백그라운드">background-attachment</li>
+                    <li data-name="background-blend-mode" data-topic="백그라운드">background-blend-mode</li>
+                    <li data-name="background-clip" data-topic="백그라운드">background-clip</li>
+                    <li data-name="background-color" data-topic="백그라운드">background-color</li>
+                    <li data-name="background-image" data-topic="백그라운드">background-image</li>
+                    <li data-name="background-origin" data-topic="백그라운드">background-origin</li>
+                    <li data-name="ackground-position" data-topic="백그라운드">background-position</li>
+                    <li data-name="background-repeat" data-topic="백그라운드">background-repeat</li>
+                    <li data-name="background-size" data-topic="백그라운드">background-size</li>
+                    <li data-name="border" data-topic="보더">border</li>
+                    <li data-name="order-bottom" data-topic="보더">border-bottom</li>
+                    <li data-name="border-bottom-color" data-topic="보더">border-bottom-color</li>
+                    <li data-name="border-bottom-left-radius" data-topic="보더">border-bottom-left-radius</li>
+                    <li data-name="border-bottom-right-radius" data-topic="보더">border-bottom-right-radius</li>
+                    <li data-name="border-bottom-style" data-topic="보더">border-bottom-style</li>
+                    <li data-name="border-bottom-width" data-topic="보더">border-bottom-width</li>
+                    <li data-name="border-collapse" data-topic="보더">border-collapse</li>
+                    <li data-name="border-color" data-topic="보더">border-color</li>
+                    <li data-name="border-image" data-topic="보더">border-image</li>
+                    <li data-name="border-image-outset" data-topic="보더">border-image-outset</li>
+                    <li data-name="border-image-repeat" data-topic="보더">border-image-repeat</li>
+                    <li data-name="border-image-slice" data-topic="보더">border-image-slice</li>
+                    <li data-name="border-image-source" data-topic="보더">border-image-source</li>
+                    <li data-name="border-image-width" data-topic="보더">border-image-width</li>
+                    <li data-name="border-left" data-topic="보더">border-left</li>
+                    <li data-name="border-left-color" data-topic="보더">border-left-color</li>
+                    <li data-name="border-left-style" data-topic="보더">border-left-style</li>
+                    <li data-name="border-left-width" data-topic="보더">border-left-width</li>
+                    <li data-name="border-radius" data-topic="보더">border-radius</li>
+                    <li data-name="border-right" data-topic="보더">border-right</li>
+                    <li data-name="border-right-color" data-topic="보더">border-right-color</li>
+                    <li data-name="border-right-style" data-topic="보더">border-right-style</li>
+                    <li data-name="border-right-width" data-topic="보더">border-right-width</li>
+                    <li data-name="border-spacing" data-topic="보더">border-spacing</li>
+                    <li data-name="border-style" data-topic="보더">border-style</li>
+                    <li data-name="border-top" data-topic="보더">border-top</li>
+                    <li data-name="border-top-color" data-topic="보더">border-top-color</li>
+                    <li data-name="border-top-left-radius" data-topic="보더">border-top-left-radius</li>
+                    <li data-name="border-top-right-radius" data-topic="보더">border-top-right-radius</li>
+                    <li data-name="border-top-style" data-topic="보더">border-top-style</li>
+                    <li data-name="border-top-width" data-topic="보더">border-top-width </li>
+                    <li data-name="border-width" data-topic="보더">border-width</li>
+                    <li data-name="bottom" data-topic="버튼">bottom</li>
+                    <li data-name="box-decoration-break" data-topic="박스">box-decoration-break</li>
+                    <li data-name="box-shadow" data-topic="박스">box-shadow</li>
+                    <li data-name="box-sizing" data-topic="박스">box-sizing</li>
+                    <li data-name="caption-side" data-topic="박스">caption-side</li>
+                    <li data-name="caret-color" data-topic="박스">caret-color</li>
+                    <li data-name="clear" data-topic="클리어">clear</li>
+                    <li data-name="clip" data-topic="클립">clip</li>
+                    <li data-name="color" data-topic="컬러">color</li>
+                    <li data-name="column-count" data-topic="칼럼" >column-count</li>
+                    <li data-name="column-fill" data-topic="칼럼">column-fill</li>
+                    <li data-name="column-gap" data-topic="칼럼">column-gap</li>
+                    <li data-name="column-rule" data-topic="칼럼">column-rule </li>
+                    <li data-name="column-rule-color" data-topic="칼럼">column-rule-color</li>
+                    <li data-name="column-rule-style" data-topic="칼럼">column-rule-style</li>
+                    <li data-name="column-rule-width" data-topic="칼럼">column-rule-width</li>
+                    <li data-name="column-span" data-topic="칼럼">column-span</li>
+                    <li data-name="column-width" data-topic="칼럼">column-width</li>
+                    <li data-name="columns" data-topic="칼럼">columns</li>
+                    <li data-name="content" data-topic="컨텐츠">content</li>
+                    <li data-name="counter-increment" data-topic="카운터">counter-increment</li>
+                    <li data-name="counter-reset" data-topic="카운터">counter-reset</li>
+                    <li data-name="cursor" data-topic="커서">cursor</li>
+                    <li data-name="direction" data-topic="디렉션">direction</li>
+                    <li data-name="display" data-topic="디스플레이">display</li>
+                    <li data-name="empty-cells" data-topic="엠프티">empty-cells</li>
+                    <li data-name="filter" data-topic="필터">filter</li>
+                    <li data-name="flex" data-topic="플렉스">flex</li>
+                    <li data-name="flex-basis" data-topic="플렉스">flex-basis</li>
+                    <li data-name="flex-direction" data-topic="플렉스">flex-direction</li>
+                    <li data-name="flex-flow" data-topic="플렉스">flex-flow</li>
+                    <li data-name="flex-grow" data-topic="플렉스">flex-grow</li>
+                    <li data-name="flex-shrink" data-topic="플렉스">flex-shrink</li>
+                    <li data-name="flex-wrap" data-topic="플렉스">flex-wrap</li>
+                    <li data-name="float" data-topic="플루트">float</li>
+                    <li data-name="font" data-topic="폰트">font</li>
+                    <li data-name="font-family" data-topic="폰트">font-family</li>
+                    <li data-name="font-size" data-topic="폰트">font-size</li>
+                    <li data-name="font-size-adjust" data-topic="폰트">font-size-adjust</li>
+                    <li data-name="font-stretch" data-topic="폰트">font-stretch</li>
+                    <li data-name="font-style" data-topic="폰트">font-style</li>
+                    <li data-name="font-variant" data-topic="폰트">font-variant</li>
+                    <li data-name="font-weight" data-topic="폰트">font-weight</li>
+                    <li data-name="grid" data-topic="그리드">grid</li>
+                    <li data-name="grid-area" data-topic="그리드">grid-area</li>
+                    <li data-name="grid-auto-columns" data-topic="그리드">grid-auto-columns</li>
+                    <li data-name="grid-auto-flow" data-topic="그리드">grid-auto-flow</li> 
+                    <li data-name="grid-auto-rows" data-topic="그리드">grid-auto-rows</li>
+                    <li data-name="grid-column" data-topic="그리드">grid-column</li>
+                    <li data-name="grid-auto-flow" data-topic="그리드">grid-column-end</li>
+                    <li data-name="grid-column-end" data-topic="그리드">grid-column-gap</li>
+                    <li data-name="grid-column-start" data-topic="그리드">grid-column-start</li>
+                    <li data-name="grid-gap" data-topic="그리드">grid-gap</li>
+                    <li data-name="grid-row" data-topic="그리드">grid-row</li>
+                    <li data-name="grid-row-end" data-topic="그리드">grid-row-end</li>
+                    <li data-name="grid-row-gap" data-topic="그리드">grid-row-gap</li>
+                    <li data-name="grid-row-start" data-topic="그리드">grid-row-start</li>
+                    <li data-name="grid-template" data-topic="그리드">grid-template</li>
+                    <li data-name="grid-template-areas" data-topic="그리드">grid-template-areas</li>
+                    <li data-name="grid-template-columns" data-topic="그리드">grid-template-columns</li>
+                    <li data-name="grid-template-rows" data-topic="그리드">grid-template-rows</li>
+                    <li data-name="hanging-punctuation" data-topic="그리드">hanging-punctuation</li>
+                    <li data-name="height" data-topic="세로">height</li>
+                    <li data-name="hyphens" data-topic="하이폰">hyphens</li>
+                    <li data-name="isolation" data-topic="아이소래이션">isolation</li>
+                    <li data-name="justify-content" data-topic="저스티파이">justify-content</li>
+                    <li data-name="left" data-topic="왼쪽">left</li>
+                    <li data-name="letter-spacing" data-topic="레터">letter-spacing</li>
+                    <li data-name="line-height" data-topic="라인">line-height</li>
+                    <li data-name="list-style" data-topic="라인">list-style</li>
+                    <li data-name="list-style-image" data-topic="라인">list-style-image</li>
+                    <li data-name="list-style-position" data-topic="라인">list-style-position</li>
+                    <li data-name="list-style-type" data-topic="라인">list-style-type</li>
+                    <li data-name="margin" data-topic="마진">margin</li>
+                    <li data-name="margin-bottom" data-topic="마진">margin-bottom</li>
+                    <li data-name="margin-left" data-topic="마진">margin-left</li>
+                    <li data-name="margin-right" data-topic="마진">margin-right</li>
+                    <li data-name="margin-top" data-topic="마진">margin-top</li>
+                    <li data-name="max-height" data-topic="맥스">max-height</li>
+                    <li data-name="max-width" data-topic="맥스">max-width </li>
+                    <li data-name="min-height" data-topic="민">min-height</li>
+                    <li data-name="min-width" data-topic="민">min-width</li>
+                    <li data-name="mix-blend-mode" data-topic="믹스">mix-blend-mode</li>
+                    <li data-name="object-fit" data-topic="오브젝트">object-fit</li>
+                    <li data-name="object-position" data-topic="오브젝트">object-position</li>
+                    <li data-name="opacity" data-topic="오파시티">opacity</li>
+                    <li data-name="order" data-topic="오더">order</li>
+                    <li data-name="outline" data-topic="아웃라인">outline</li>
+                    <li data-name="outline-color" data-topic="아웃라인">outline-color</li>
+                    <li data-name="outline-offset" data-topic="아웃라인">outline-offset</li>
+                    <li data-name="outline-style" data-topic="아웃라인">outline-style</li>
+                    <li data-name="outline-width" data-topic="아웃라인">outline-width</li>
+                    <li data-name="overflow" data-topic="오버플로우">overflow</li>
+                    <li data-name="overflow-x" data-topic="오버플로우">overflow-x</li>
+                    <li data-name="overflow-y" data-topic="오버플로우">overflow-y</li>
+                    <li data-name="padding" data-topic="패딩">padding</li>
+                    <li data-name="padding-bottom" data-topic="패딩">padding-bottom</li>
+                    <li data-name="padding-left" data-topic="패딩">padding-left</li>
+                    <li data-name="padding-right" data-topic="패딩">padding-right</li>
+                    <li data-name="padding-top" data-topic="패딩">padding-top</li>
+                    <li data-name="page-break-after" data-topic="페이지">page-break-after</li>
+                    <li data-name="page-break-before" data-topic="페이지">page-break-before</li>
+                    <li data-name="page-break-inside" data-topic="페이지">page-break-inside</li>
+                    <li data-name="perspective" data-topic="퍼스펙티브">perspective</li>
+                    <li data-name="perspective-origin" data-topic="퍼스펙티브">perspective-origin</li>
+                    <li data-name="pointer-events" data-topic="포인터">pointer-events</li>
+                    <li data-name="position" data-topic="포지션">position</li>
+                    <li data-name="quotes" data-topic="쿼티스">quotes</li>
+                    <li data-name="resize" data-topic="리사이즈">resize</li>
+                    <li data-name="right" data-topic="오른쪽">right</li>
+                    <li data-name="tab-size" data-topic="탭">tab-size</li>
+                    <li data-name="table-layout" data-topic="테이블">table-layout</li>
+                    <li data-name="text-align" data-topic="텍스트">text-align</li>
+                    <li data-name="text-align-last" data-topic="텍스트">text-align-last</li>
+                    <li data-name="text-decoration" data-topic="텍스트">text-decoration</li>
+                    <li data-name="text-decoration-color" data-topic="텍스트">text-decoration-color </li>
+                    <li data-name="text-decoration-line" data-topic="텍스트">text-decoration-line</li>
+                    <li data-name="text-decoration-style" data-topic="텍스트">text-decoration-style</li>
+                    <li data-name="text-indent" data-topic="텍스트">text-indent</li>
+                    <li data-name="text-justify" data-topic="텍스트">text-justify</li>
+                    <li data-name="text-overflow" data-topic="텍스트">text-overflow</li>
+                    <li data-name="text-shadow" data-topic="텍스트">text-shadow</li>
+                    <li data-name="text-transform" data-topic="텍스트">text-transform</li>
+                    <li data-name="top" data-topic="위">top</li>
+                    <li data-name="transform" data-topic="트랜스">transform</li>
+                    <li data-name="transform-origin" data-topic="트랜스">transform-origin</li>
+                    <li data-name="transform-style" data-topic="트랜스">transform-style</li>
+                    <li data-name="transition" data-topic="트랜스">transition</li>
+                    <li data-name="transition-delay" data-topic="트랜스">transition-delay</li>
+                    <li data-name="transition-duration" data-topic="트랜스">transition-duration</li>
+                    <li data-name="transition-property" data-topic="트랜스">transition-property</li>
+                    <li data-name="transition-timing-function" data-topic="트랜스">transition-timing-function</li>
+                    <li data-name="unicode-bidi" data-topic="유니">unicode-bidi</li>
+                    <li data-name="user-select" data-topic="유저">user-select</li>
+                    <li data-name="vertical-align" data-topic="버티컬">vertical-align</li>
+                    <li data-name="visibility" data-topic="비지빌리티">visibility</li>
+                    <li data-name="white-space" data-topic="화이트">white-space</li>
+                    <li data-name="width" data-topic="가로">width</li>
+                    <li data-name="word-break" data-topic="워드">word-break</li>
+                    <li data-name="word-spacing" data-topic="워드">word-spacing</li>
+                    <li data-name="word-wrap" data-topic="워드">word-wrap</li>
+                    <li data-name="z-index" data-topic="제트">z-index</li> 
                 </ul>
             </div>
         </div>
@@ -274,5 +356,36 @@
             <img src="img/search_dog.png" alt="">
         </div>
     </div>
+    <script>
+        const searchBox = document.querySelector("#search-box");
+        const cssList = document.querySelectorAll(".list ul li");
+
+        //searchBox.addEventListener("keyup", funtion(){});
+        searchBox.addEventListener("keyup", () => {     //키보드 이벤트
+            const searchWord = searchBox.value;     //사용자가 입력한 정보 
+
+            //console.log(searchWord);
+
+            cssList.forEach((el) => {       //데이터 리스트 갯수
+                //console.log(el);
+
+                const cssName = el.dataset.name;        //리스트에 name 속성 값을 가져옴
+                const cssTopic = el.dataset.topic;      //리스트에 topic 속성 값을 가져옴
+
+                //console.log(cssName);
+               // console.log(cssTopic);
+
+                if (searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssTopic.charAt(0)){
+                    el.classList.remove("hide");
+                }else {
+                    el.classList.add("hide");
+                }
+
+
+                
+            })
+        });
+    </script>
 </body>
+
 </html>
