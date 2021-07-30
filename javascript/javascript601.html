@@ -306,7 +306,8 @@
     </ul>
     <h2 class="mt20">배열 메서드 샘플</h2>
     <ul>
-        <li><a href=""</li>
+        <li><a href="javascriptsample602-1.html">01. chatAt()를 이용한 CSS 속성 첫 글자 검색하기</a></li>
+        <li><a href="javascriptsample602-2.html">02. find()를 이용한 CSS 속성 검색하기 </a></li>
     </ul>
     <hr>
     <!-- sample01-->
@@ -449,14 +450,14 @@
                     <td class="sample03_N1"></td>
                     <td class="sample03_Q1"></td>
                     <td class="sample03_M1"></td>
-                    <td class="sample03_P1"></td>
+                    <td class="sample03_P1 result" ></td>
                     <td class="sample03_R1 result"></td>
                 </tr>
                 <tr>
                     <td class="sample03_N2"></td>
                     <td class="sample03_Q2"></td>
                     <td class="sample03_M2"></td>
-                    <td class="sample03_P2"></td>
+                    <td class="sample03_P2 result"></td>
                     <td class="sample03_R2 result"></td>
                 </tr>
               
@@ -468,18 +469,12 @@
     const arr = [100, 200, 300 ,400, 500];
     const text = arr.push(600);
 
-    document.querySelector(".sample03_N1").innerHTML = "1";
-    document.querySelector(".sample03_Q1").innerHTML = "[100, 200, 300 ,400, 500]";
-    document.querySelector(".sample03_M1").innerHTML = ".push(600)";
     document.querySelector(".sample03_M1").innerHTML = text;
     document.querySelector(".sample03_R1").innerHTML = arr;
 
     const arr2 = [100, 200, 300 ,400, 500];
     const text2 = arr2.unshift(600);
 
-    document.querySelector(".sample03_N2").innerHTML = "2";
-    document.querySelector(".sample03_Q2").innerHTML = "[100, 200, 300 ,400, 500]";
-    document.querySelector(".sample03_M2").innerHTML = ".unshift(600)";
     document.querySelector(".sample03_P2").innerHTML = text2;
     document.querySelector(".sample03_R2").innerHTML = arr2;
 }
@@ -582,7 +577,12 @@
                     <td class="sample05_M2"></td>
                     <td class="sample05_R2 result"></td>
                 </tr>
-              
+                <tr>
+                    <td class="sample05_N3"></td>
+                    <td class="sample05_Q3"></td>
+                    <td class="sample05_M3"></td>
+                    <td class="sample05_R3 result"></td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -624,7 +624,12 @@
                     <td class="sample06_M2"></td>
                     <td class="sample06_R2 result"></td>
                 </tr>
-              
+                <tr>
+                    <td class="sample06_N3"></td>
+                    <td class="sample06_Q3"></td>
+                    <td class="sample06_M3"></td>
+                    <td class="sample06_R3 result"></td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -687,7 +692,7 @@
             document.querySelector(".sample03_N1").innerHTML = "1";
             document.querySelector(".sample03_Q1").innerHTML = "[100, 200, 300 ,400, 500]";
             document.querySelector(".sample03_M1").innerHTML = ".push(600)";
-            document.querySelector(".sample03_M1").innerHTML = text;
+            document.querySelector(".sample03_P1").innerHTML = text;
             document.querySelector(".sample03_R1").innerHTML = arr;
 
             const arr2 = [100, 200, 300 ,400, 500];
@@ -720,52 +725,52 @@
             document.querySelector(".sample04_P2").innerHTML = text2;
             document.querySelector(".sample04_R2").innerHTML = arr2;
         }
-        //sample05
-        //05. 배열 메서드 : shift() / pop() : 배열 처음/마지막 요소 삭제하기 :반환 (삭제된 요소)
-        { 
-            const arr = [100, 200, 300 ,400, 500];
-            const text =arr.indexOf(200);
+        //05. 배열 메서드 : indexOf() : 배열 요소 검색하기 : 반환(숫자)
+        //05. 배열 메서드 : lastIndexOf() : 배열 요소 끝에서 검색하기 : 반환(숫자)
+        //05. 배열 메서드 : includes() : 배열 요소 검색하기 : 반환(불린)
+        {
+            const arr = [100, 200, 300, 400, 500];
+            const text = arr.indexOf(200);
 
             document.querySelector(".sample05_N1").innerHTML = "1";
-            document.querySelector(".sample05_Q1").innerHTML = "[100, 200, 300 ,400, 500]";
+            document.querySelector(".sample05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample05_M1").innerHTML = ".indexOf(200)";
             document.querySelector(".sample05_R1").innerHTML = text;
-
-            const arr2 = [100, 200, 300 ,400, 500];
-            const text2 =arr2.lastIndexOf(200);
+            
+            const text2 = arr.lastIndexOf(200);
 
             document.querySelector(".sample05_N2").innerHTML = "2";
-            document.querySelector(".sample05_Q2").innerHTML = "[100, 200, 300 ,400, 500]";
+            document.querySelector(".sample05_Q2").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample05_M2").innerHTML = ".lastIndexOf(200)";
             document.querySelector(".sample05_R2").innerHTML = text2;
 
-            const arr3 = [100, 200, 300 ,400, 500];
-            const text3 =arr3.includes(200);
+            const text3 = arr.includes(200);
 
             document.querySelector(".sample05_N3").innerHTML = "3";
-            document.querySelector(".sample05_Q3").innerHTML = "[100, 200, 300 ,400, 500]";
+            document.querySelector(".sample05_Q3").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample05_M3").innerHTML = ".includes(200)";
             document.querySelector(".sample05_R3").innerHTML = text3;
         }
-        //sample05
+        //sample06
         //06. 배열 메서드 : find() : 배열 요소 검색하기 : 반환(요소)
         //06. 배열 메서드 : findIndex() : 배열 첫 요소 검색하기 : 반환(요소)
         {
-            const arr = [100, 200, 300 ,400, 500];
+            const text1 = [100, 200, 300, 400, 500];
+
             //리턴값 함수
-            //const find = arr.find (function(element){
-                //return element ===300;
-            
-            //})
-            //화살표 함수
-            //const find =arr.find ((element) =>{
-                //return element ===300 
-            //})
-            //화살표 함수 괄호 생략
-            //const find = arr.find(element => {
-                //return element === 300
-            //});
-            const find =arr.find(element => element ===300);
+            // const find = arr.find(function(element){
+            //     return element === 300
+            // });
+            // //화살표 함수
+            // const find = arr.find((element) => {
+            //     return element === 300
+            // });
+            // //화살표 함수 괄호 생략
+            // const find = arr.find(element => {
+            //     return element === 300
+            // });
+            //화살표 함수 괄호, 리턴 생략
+            const find = text1.find(element => element === 300);
 
             document.querySelector(".sample06_N1").innerHTML = "1";
             document.querySelector(".sample06_Q1").innerHTML = "[100, 200, 300 ,400, 500]";
@@ -773,7 +778,7 @@
             document.querySelector(".sample06_R1").innerHTML = find;
 
             const text2 =["javascript", "react", "vue"];
-            const find2 =text.find(element => element ==="javascript");
+            const find2 =text2.find(element => element ==="javascript");
 
             document.querySelector(".sample06_N2").innerHTML = "2";
             document.querySelector(".sample06_Q2").innerHTML = "['javascript', 'react', 'vue']";
@@ -781,14 +786,12 @@
             document.querySelector(".sample06_R2").innerHTML = find2;
 
             const text3 =["javascript", "react", "vue"];
-            const find3 =text.findIndex(element => element ==="javascript");
+            const find3 =text3.findIndex(element => element ==="javascript");
 
             document.querySelector(".sample06_N3").innerHTML = "3";
             document.querySelector(".sample06_Q3").innerHTML = "['javascript', 'react', 'vue']";
             document.querySelector(".sample06_M3").innerHTML = "찾는 요소 : javascript";
             document.querySelector(".sample06_R3").innerHTML = find3;
-
-
         }
     </script>
 </body>
