@@ -23,7 +23,7 @@
         //배열
         //100, 200 , 300 변수에 저장을 출력
         {
-            const arr = new Array[100, 200, 300]; 
+            const arr = new Array;[100, 200, 300]; 
             
             document.write(arr[0], "<br>");
             document.write(arr[1], "<br>");
@@ -134,6 +134,31 @@
         for( let i = 0; i<num.length; i++){
             document.write(num[i]);
         }
+       }
+
+       {
+           //"함수가 실행되었습니다." (선언적 함수);
+            function func(){
+                document.write("함수가 실행되었습니다.<br>")
+            }
+            func();
+           //"함수가 실행되었습니다." (익명 함수);
+            const func2 = function() {
+                document.write(str);
+            }
+            func2("함수가 실행되었습니다.<br>")
+            func2("함수가 실행되다.<br>")
+            func2("함수가 실행.<br>")
+           //"함수가 실행되었습니다." (매개변수  함수);
+            function func(str) {
+                document.write("함수가 실행되었습니다.<br>")
+            }
+           //"함수가 실행되었습니다." (리턴값 함수);
+           function func3(){
+               const str = "함수가 실행되었습니다.<br>"
+               return str;
+           }
+           document.write(func3);
        }
     </script>
 </body>
