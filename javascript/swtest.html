@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>응용 SW기초 기술 활용</title>
+</head>
+<body>
+    <script>
+        {   
+            document.write("switch문");
+            document.write("제일 먼저 잡고 싶은 물건이 무엇인가요? 1.과일, 2.떡, 3.수정구슬, 4.현찰, 5. 반지","<br>");
+            let num = 1;
+
+            switch (num){
+                case 1 :
+                    document.write("1.과일","<br>");
+                    document.write("당신은 생각이 많고 진지해 보이는 연상 타입입니다.","<br>");
+                break;
+                case 2 :
+                    document.write("2.떡","<br>");
+                    document.write("당신은 묻에 약해 화술과 매너가 좋은 타입입니다.","<br>");
+                break;
+                case 3 :
+                    document.write("3.수정구슬","<br>");
+                    document.write("당신은 정열적이고 열중하는 타입입니다.","<br>");
+                break;
+                case 4 :
+                    document.write("4.현찰","<br>");
+                    document.write("당신은 부드럽고 따뜻한 타입입니다.","<br>");
+                break;
+                case 5 : 
+                    document.write("5.반지","<br>");
+                    document.write("당신은 자기를 보호해 줄 수 있는 이성 타입입니다.","<br>");
+                break;
+            }
+        }
+        {
+            document.write("if문","<br>");
+            document.write("제일 먼저 잡고 싶은 물건이 무엇인가요? 1.과일, 2.떡, 3.수정구슬, 4.현찰, 5.반지","<br>");
+
+            let num = 1;
+
+            if(num==1){
+                document.write("1.과일","<br>");
+                document.write("당신은 생각이 많고 진지해 보이는 연상타입입니다.","<br>");
+            } else if(num==2){
+                document.write("2.떡","<br>");
+                document.write("당신은 무드에 약해 화술과 매너가 좋은 타입입니다.","<br>");
+            } else if (num == 3){
+                document.write("3.수정구슬","<br>");
+                documen.write("당신은 정열적이고 열중하는 타입입니다.","<br>");
+            } else if (num == 4){
+                document.write("4.현찰","<br>");
+                document.write("당신은 부드럽고 따뜻한 타입입니다.","<br>");
+            } else if (num ==5 ){
+                document.write("5.반지","<br>");
+                document.write("당신은 자기를 보호해 줄 수 있는 이성 타입입니다.","<br>");
+            }
+        }
+
+    </script>
+</body>
+</html>
