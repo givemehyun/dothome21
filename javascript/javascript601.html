@@ -353,8 +353,7 @@
             </table>
         </div>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">
-{
+            <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, 300 ,400, 500];
     const text = arr.length;
 
@@ -384,13 +383,6 @@
                         <th>메서드</th>
                         <th>결과값</th>
                     </tr>
-                    <tr>
-                        <td class="sample01_N1"></td>
-                        <td class="sample01_Q1"></td>
-                        <td class="sample01_M1"></td>
-                        <td class="sample01_R1 result"></td>
-                    </tr>
-                   
                 </thead>
                 <tbody>
                     <tr>
@@ -421,34 +413,24 @@
             </table>
         </div>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">
-{
+            <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, 300 ,400, 500];
     const text1 = arr.join("*");
     const text2 = arr.join("-");
     const text3 = arr.join("");
     const text4 = arr.join(" ");
 
-    document.querySelector(".sample02_N1").innerHTML = "1";
-    document.querySelector(".sample02_Q1").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample02_M1").innerHTML = ".join('*'')";
     document.querySelector(".sample02_R1").innerHTML = text1;
 
-    document.querySelector(".sample02_N2").innerHTML = "2";
-    document.querySelector(".sample02_Q2").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample02_M2").innerHTML = ".join('-')";
     document.querySelector(".sample02_R2").innerHTML = text2;
 
-    document.querySelector(".sample02_N3").innerHTML = "3";
-    document.querySelector(".sample02_Q3").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample02_M3").innerHTML = ".join('')";
     document.querySelector(".sample02_R3").innerHTML = text3;
 
-    document.querySelector(".sample02_N4").innerHTML = "4";
-    document.querySelector(".sample02_Q4").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample02_M4").innerHTML = ".join(' ')";
     document.querySelector(".sample02_R4").innerHTML = text4;
-
 }
 </code></pre>
         </div>
@@ -556,8 +538,6 @@
     const arr = [100, 200, 300 ,400, 500];
     const text = arr.shift();
 
-    document.querySelector(".sample04_N1").innerHTML = "1";
-    document.querySelector(".sample04_Q1").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample04_M1").innerHTML = ".shift()";
     document.querySelector(".sample04_P1").innerHTML = text;
     document.querySelector(".sample04_R1").innerHTML = arr;
@@ -565,14 +545,11 @@
     const arr2 = [100, 200, 300 ,400, 500];
     const text2 = arr2.pop();
 
-    document.querySelector(".sample04_N2").innerHTML = "2";
-    document.querySelector(".sample04_Q2").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample04_M2").innerHTML = ".pop()";
     document.querySelector(".sample04_P2").innerHTML = text2;
     document.querySelector(".sample04_R2").innerHTML = arr2;
 }
 </code></pre>
-</div>
 </div>
 <!-- sample05-->
 <div id="sample05" class="sample">
@@ -627,34 +604,26 @@
     const arr = [100, 200, 300, 400, 500];
     const text = arr.indexOf(200);
 
-    document.querySelector(".sample05_N1").innerHTML = "1";
-    document.querySelector(".sample05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
     document.querySelector(".sample05_M1").innerHTML = ".indexOf(200)";
     document.querySelector(".sample05_R1").innerHTML = text;
     
     const text2 = arr.lastIndexOf(200);
 
-    document.querySelector(".sample05_N2").innerHTML = "2";
-    document.querySelector(".sample05_Q2").innerHTML = "[100, 200, 300, 400, 500]";
     document.querySelector(".sample05_M2").innerHTML = ".lastIndexOf(200)";
     document.querySelector(".sample05_R2").innerHTML = text2;
 
     const arr3 = [100, 200, 300, 200, 500];
     const text3 = arr3.lastIndexOf(200);
 
-    document.querySelector(".sample05_N3").innerHTML = "3";
-    document.querySelector(".sample05_Q3").innerHTML = "[100, 200, 300, 200, 500];";
     document.querySelector(".sample05_M3").innerHTML = ".lastIndexOf(200)";
     document.querySelector(".sample05_R3").innerHTML = text3;
 
     const text4 = arr.includes(200);
 
-    document.querySelector(".sample05_N4").innerHTML = "4";
-    document.querySelector(".sample05_Q4").innerHTML = "[100, 200, 300, 400, 500]";
     document.querySelector(".sample05_M4").innerHTML = ".includes(200)";
     document.querySelector(".sample05_R4").innerHTML = text4;
 }
-        </code></pre>
+</code></pre>
     </div>
 </div>
 <!-- sample06-->
@@ -710,15 +679,11 @@
     const arr = [100 ,200 ,300 ,400 , 500];
     arr.forEach=arr.reverse();
 
-    document.querySelector(".sample06_N1").innerHTML = "1";
-    document.querySelector(".sample06_Q1").innerHTML = "[100, 200, 300, 400, 500]";
     document.querySelector(".sample06_M1").innerHTML = ".reverse()";
     document.querySelector(".sample06_R1").innerHTML = arr;
 
     const text2 = arr.sort();
 
-    document.querySelector(".sample06_N2").innerHTML = "2";
-    document.querySelector(".sample06_Q2").innerHTML = "[100, 200, 300, 400, 500]";
     document.querySelector(".sample06_M2").innerHTML = ".sort()";
     document.querySelector(".sample06_R2").innerHTML = text2;
 
@@ -726,8 +691,6 @@
         return b-a;
     });
 
-    document.querySelector(".sample06_N3").innerHTML = "3";
-    document.querySelector(".sample06_Q3").innerHTML = "[100, 200, 300, 400, 500]";
     document.querySelector(".sample06_M3").innerHTML = ".sort()";
     document.querySelector(".sample06_R3").innerHTML = text3;
     
@@ -735,13 +698,11 @@
     const text4 = str1.sort((a,b)=>{
         return a.localeCompare(b);
     });
-    
-    document.querySelector(".sample06_N4").innerHTML = "4";
-    document.querySelector(".sample06_Q4").innerHTML = "['c','d','e','a','b']";
+
     document.querySelector(".sample06_M4").innerHTML = ".sort()";
     document.querySelector(".sample06_R4").innerHTML = text4;
 }
-        </code></pre>
+</code></pre>
     </div>
 </div>
 <div id="sample07" class="sample">
@@ -781,25 +742,21 @@
         </table>
     </div>
     <div class="code">
-        <pre class="line-numbers"><code class="language-js"> {
+        <pre class="line-numbers"><code class="language-js">{
     const arrNum1 = [100, 200, 300];
     const arrNum2 = [400, 500, 600];
 
     const result1 = arrNum1.concat(arrNum2);
 
-    document.querySelector(".sample07_N1").innerHTML = "1";
-    document.querySelector(".sample07_Q1").innerHTML = "[100, 200, 300 ],[400, 500, 600]";
     document.querySelector(".sample07_M1").innerHTML = ".concat";
     document.querySelector(".sample07_R1").innerHTML = result1;
 
     const result2 = [...arrNum1, ...arrNum2];
 
-    document.querySelector(".sample07_N2").innerHTML = "2";
-    document.querySelector(".sample07_Q2").innerHTML = "[100, 200, 300 ],[400, 500, 600]";
     document.querySelector(".sample07_M2").innerHTML = "[...arrNum1, ...arrNum2]";
     document.querySelector(".sample07_R2").innerHTML = result2;
 }
-        </code></pre>
+</code></pre>
     </div>
 </div>
 <div id="sample08" class="sample">
@@ -866,39 +823,30 @@
     const arrNum1 = [100, 200, 300, 400, 500];
 
     const result1 = arrNum1.slice(2);
-        document.querySelector(".sample08_N1").innerHTML = "1";
-        document.querySelector(".sample08_Q1").innerHTML = "[100, 200, 300, 400, 500]";
         document.querySelector(".sample08_M1").innerHTML = ".slice";
         document.querySelector(".sample08_R1").innerHTML = result1;
 
     const result2 = arrNum1.slice(2,3);
-        document.querySelector(".sample08_N2").innerHTML = "2";
-        document.querySelector(".sample08_Q2").innerHTML = "[100, 200, 300, 400, 500]";
         document.querySelector(".sample08_M2").innerHTML = ".slice";
         document.querySelector(".sample08_R2").innerHTML = result2;
+
     const result3 = arrNum1.slice(2,4);
-        document.querySelector(".sample08_N3").innerHTML = "3";
-        document.querySelector(".sample08_Q3").innerHTML = "[100, 200, 300, 400, 500]";
         document.querySelector(".sample08_M3").innerHTML = ".slice";
         document.querySelector(".sample08_R3").innerHTML = result3;
+
     const result4 = arrNum1.slice(2,5);
-        document.querySelector(".sample08_N4").innerHTML = "4";
-        document.querySelector(".sample08_Q4").innerHTML = "[100, 200, 300, 400, 500]";
         document.querySelector(".sample08_M4").innerHTML = ".slice";
         document.querySelector(".sample08_R4").innerHTML = result4;
+
     const result5 = arrNum1.slice(-2);
-        document.querySelector(".sample08_N5").innerHTML = "5";
-        document.querySelector(".sample08_Q5").innerHTML = "[100, 200, 300, 400, 500]";
         document.querySelector(".sample08_M5").innerHTML = ".slice";
         document.querySelector(".sample08_R5").innerHTML = result5;
 
     const result6 = arrNum1.slice(-2, 5);
-        document.querySelector(".sample08_N6").innerHTML = "6";
-        document.querySelector(".sample08_Q6").innerHTML = "[100, 200, 300, 400, 500]";
         document.querySelector(".sample08_M6").innerHTML = ".slice";
         document.querySelector(".sample08_R6").innerHTML = result6;
 }
-        </code></pre>
+</code></pre>
     </div>
 </div>
 <div id="sample09" class="sample">
@@ -973,20 +921,16 @@
     const arrNum1 = [100, 200, 300, 400, 500];
     const result1 = arrNum1.splice(2);
 
-        document.querySelector(".sample09_N1").innerHTML = "1";
-        document.querySelector(".sample09_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-        document.querySelector(".sample09_M1").innerHTML = "splice(2)";
-        document.querySelector(".sample09_R1").innerHTML = arrNum1;
+    document.querySelector(".sample09_M1").innerHTML = "splice(2)";
+    document.querySelector(".sample09_R1").innerHTML = arrNum1;
 
-        const arrNum2 = [100, 200, 300, 400, 500];
-        const result2 = arrNum2.splice(2, 3);
+    const arrNum2 = [100, 200, 300, 400, 500];
+    const result2 = arrNum2.splice(2, 3);
 
-        document.querySelector(".sample09_N2").innerHTML = "2";
-        document.querySelector(".sample09_Q2").innerHTML = "[100, 200, 300, 400, 500]";
-        document.querySelector(".sample09_M2").innerHTML = "splice(2,3)";
-        document.querySelector(".sample09_R2").innerHTML = arrNum2;
+    document.querySelector(".sample09_M2").innerHTML = "splice(2,3)";
+    document.querySelector(".sample09_R2").innerHTML = arrNum2;
 }
-        </code></pre>
+</code></pre>
     </div>
 </div>
 <!-- sample11 -->
@@ -1035,46 +979,27 @@
         <pre class="line-numbers"><code class="language-js">{
     const text1 = [100, 200, 300, 400, 500];
 
-    //리턴값 함수
-    // const find = arr.find(function(element){
-    //     return element === 300
-    // });
-    // //화살표 함수
-    // const find = arr.find((element) => {
-    //     return element === 300
-    // });
-    // //화살표 함수 괄호 생략
-    // const find = arr.find(element => {
-    //     return element === 300
-    // });
     //화살표 함수 괄호, 리턴 생략
     const find = text1.find(element => element === 300);
 
-    document.querySelector(".sample10_N1").innerHTML = "1";
-    document.querySelector(".sample10_Q1").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample10_M1").innerHTML = "찾는 요소 : 300";
     document.querySelector(".sample10_R1").innerHTML = find;
 
     const text2 =["javascript", "react", "vue"];
     const find2 =text2.find(element => element ==="javascript");
 
-    document.querySelector(".sample10_N2").innerHTML = "2";
-    document.querySelector(".sample10_Q2").innerHTML = "['javascript', 'react', 'vue']";
     document.querySelector(".sample10_M2").innerHTML = "find() : javascript";
     document.querySelector(".sample10_R2").innerHTML = find2;
 
     const text3 =["javascript", "react", "vue"];
     const find3 =text3.findIndex(element => element ==="javascript");
 
-    document.querySelector(".sample10_N3").innerHTML = "3";
-    document.querySelector(".sample10_Q3").innerHTML = "['javascript', 'react', 'vue']";
     document.querySelector(".sample10_M3").innerHTML = "findIndex() : javascript";
     document.querySelector(".sample10_R3").innerHTML = find3;
-    }
+}
 </code></pre>
     </div>
 </div>
-<hr>
 <!-- sample11 -->
 <div id="sample11" class="sample">
     <h2>11. 배열 메서드 : flter <span class="dot"></span></h2>
@@ -1123,32 +1048,24 @@
     const result1 = arrNum1.filter((el) => {
         return el === 300;
     });
-    document.querySelector(".sample11_N1").innerHTML = "1";
-    document.querySelector(".sample11_Q1").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample11_M1").innerHTML = "filter()";
     document.querySelector(".sample11_R1").innerHTML = result1;
 
     const arrNum2 = [100, 200, 300, 400, 500];
     const result2 = arrNum2.filter( el => el >= 300 );
 
-    document.querySelector(".sample11_N2").innerHTML = "2";
-    document.querySelector(".sample11_Q2").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample11_M2").innerHTML = "filter()";
     document.querySelector(".sample11_R2").innerHTML = result2;
 
     const arrText1 = ["javascript", "react", "vue" ];
     const result3 = arrText1.filter(el => el ==="javascript");
 
-    document.querySelector(".sample11_N3").innerHTML = "3";
-    document.querySelector(".sample11_Q3").innerHTML = "['javascript', 'react' , 'vue' ]";
     document.querySelector(".sample11_M3").innerHTML = "filter()";
     document.querySelector(".sample11_R3").innerHTML = result3;
-
 }
 </code></pre>
     </div>
 </div>
-<hr>
 <!-- sample12 -->
 <div id="sample11" class="sample">
     <h2>12. 배열 메서드 : flter <span class="dot"></span></h2>
@@ -1205,8 +1122,6 @@
     // });
     const result1 = arrNum1.map(el => el);
 
-    document.querySelector(".sample12_N1").innerHTML = "1";
-    document.querySelector(".sample12_Q1").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample12_M1").innerHTML = "map()";
     document.querySelector(".sample12_R1").innerHTML = result1;
     console.log(result1);
@@ -1214,36 +1129,28 @@
     const arrNum2 = [100, 200, 300, 400, 500];
     const result2 = arrNum2.map(el => el + "web");
 
-    document.querySelector(".sample12_N2").innerHTML = "2";
-    document.querySelector(".sample12_Q2").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample12_M2").innerHTML = "map()";
     document.querySelector(".sample12_R2").innerHTML = result2;
 
     const arrNum3 = [100, 200, 300, 400, 500];
     const result3 = arrNum3.map(el => el * 2);
 
-    document.querySelector(".sample12_N3").innerHTML = "3";
-    document.querySelector(".sample12_Q3").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample12_M3").innerHTML = "map()";
     document.querySelector(".sample12_R3").innerHTML = result3;
     
     //중요
-    const arrNum4 = [{a:100},{a:200},{a:300}
-    ]
+    const arrNum4 = [{a:100},{a:200},{a:300}];
     const result4 =arrNum4.map(el => el.a);
 
-    document.querySelector(".sample12_N4").innerHTML = "4";
-    document.querySelector(".sample12_Q4").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample12_M4").innerHTML = "map()";
     document.querySelector(".sample12_R4").innerHTML = result4;
 }
 </code></pre>
     </div>
 </div>
-<hr>
 <!-- sample13 -->
 <div id="sample11" class="sample">
-    <h2>13. 배열 메서드 : reduce() : 배열 요소를 하나로 만들기 : 반환(결괏값 <span class="dot"></span></h2>
+    <h2>13. 배열 메서드 : reduce() : 배열 요소를 하나로 만들기 : 반환(결과값) <span class="dot"></span></h2>
     <div class="view">
         <table>
             <colgroup>
@@ -1300,34 +1207,27 @@
     const arrNum1 = [100, 200, 300, 400, 500];
     const result1 = arrNum1.reduce(el => el);
 
-    document.querySelector(".sample13_N1").innerHTML = "1";
-    document.querySelector(".sample13_Q1").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample13_M1").innerHTML = "reduce()";
     document.querySelector(".sample13_R1").innerHTML = result1;
 
     const arrNum2 = [100, 200, 300, 400, 500];
     const result2 = arrNum2.reduce((previous, current)=> previous + current);
 
-    document.querySelector(".sample13_N2").innerHTML = "2";
-    document.querySelector(".sample13_Q2").innerHTML = "[100, 200, 300 ,400, 500]";
     document.querySelector(".sample13_M2").innerHTML = "reduce(합계)";
     document.querySelector(".sample13_R2").innerHTML = result2;
     
     const arrNum3 = [100, 200, 300, 400, 500];
     let sum = 0;
-    for (let i=0; i<arrNum3.length; i++){
+    for (let i=0; i&lt;arrNum3.length; i++){
         sum = sum + arrNum3[i];
     }
-    document.querySelector(".sample13_N3").innerHTML = "3";
-    document.querySelector(".sample13_Q3").innerHTML = "[100, 200, 300 ,400, 500]";
+
     document.querySelector(".sample13_M3").innerHTML = "for(합계)";
     document.querySelector(".sample13_R3").innerHTML = sum;
 
     const arrNum4 = [[100, 200],[300,400]];
     const result4 = arrNum4.reduce((p,c) => p.concat(c));
 
-    document.querySelector(".sample13_N4").innerHTML = "4";
-    document.querySelector(".sample13_Q4").innerHTML = "[[100, 200],[300,400]]";
     document.querySelector(".sample13_M4").innerHTML = "reduce()";
     document.querySelector(".sample13_R4").innerHTML = result4;
     console.log(result4);
@@ -1335,18 +1235,15 @@
     const arrNum5 = ["javascript", "react", "vue"];
     const result5 = arrNum5.reduceRight((p,c)=>p+c);
 
-    document.querySelector(".sample13_N5").innerHTML = "5";
-    document.querySelector(".sample13_Q5").innerHTML = "['javascript', 'react', 'vue']";
     document.querySelector(".sample13_M5").innerHTML = "reduceRight()";
     document.querySelector(".sample13_R5").innerHTML = result5;
 }
 </code></pre>
     </div>
 </div>
-<hr>
 <!-- sample14 -->
 <div id="sample11" class="sample">
-    <h2>14. 배열 메서드 : flter <span class="dot"></span></h2>
+    <h2>14. 배열 메서드 : Array.from() <span class="dot"></span></h2>
     <div class="view">
         <table>
             <colgroup>
@@ -1391,8 +1288,6 @@
     const text = "javascript";
     const result1 = Array.from(text);
 
-    document.querySelector(".sample14_N1").innerHTML = "1";
-    document.querySelector(".sample14_Q1").innerHTML = "javascript";
     document.querySelector(".sample14_M1").innerHTML = "Array.from()";
     document.querySelector(".sample14_R1").innerHTML = result1;
     console.log(result1);
@@ -1400,23 +1295,18 @@
     const text2 = "javascript";
     const result2 = Array.from(text2, el => el + "10");
 
-    document.querySelector(".sample14_N2").innerHTML = "2";
-    document.querySelector(".sample14_Q2").innerHTML = "javascript";
     document.querySelector(".sample14_M2").innerHTML = "Array.from()";
     document.querySelector(".sample14_R2").innerHTML = result2;
 
     const text3 = "javascript";
     const result3 = [...text3].map(el => el);
 
-    document.querySelector(".sample14_N3").innerHTML = "3";
-    document.querySelector(".sample14_Q3").innerHTML = "javascript";
     document.querySelector(".sample14_M3").innerHTML = "map()";
     document.querySelector(".sample14_R3").innerHTML = result3;
 }
 </code></pre>
     </div>
 </div>
-<hr>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -1695,7 +1585,7 @@
             document.querySelector(".sample09_M6").innerHTML = "splice(0, 4, 'javascript','jquery')";
             document.querySelector(".sample09_R6").innerHTML = result6;
             document.querySelector(".sample09_A6").innerHTML = arrNum6;
-}
+        }   
        //sample10
         //10. 배열 메서드 : find() : 배열 요소 검색하기 : 반환(요소)
         //10. 배열 메서드 : findIndex() : 배열 첫 요소 검색하기 : 반환(요소)
