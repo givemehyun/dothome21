@@ -302,14 +302,14 @@
         <h2>01. if문 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-    var x = 100; //변수 x에 숫자 100을 저장
-    var y = 200; //변수 y에 숫자 200을 저장
-    var z = "javascript"; //변수 z에 문자열 "javascript" 저장
-  
-    document.write("*** 01. 변수 ***"");
-    document.write(x);
-    document.write(y);
-    document.write(z);
+    //true, false,""=false 1, "1" ,0= false ,null=false , undefined = false ,[]=true ,{}= true
+    if (true) {
+        document.write("*** 01. if문 ***<br>");
+        document.write("조건문이 실행되었습니다.(true)<br><br>");
+    } else {
+        document.write("*** 01. if문 ***<br>");
+        document.write("조건문이 실행되었습니다.(false)<br><br>");
+    }
 }
 </code></pre>
         </div>
@@ -503,7 +503,7 @@
     <div id="sample10" class="sample">
         <h2>10. 중첩 for문 <span class="dot"></span></h2>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{   
+            <pre class="line-numbers"><code class="language-js">{
     document.write ("*** 10. 중첩 for문 ***");
 
     for (var i=1; i&lt=5; i++){
@@ -793,7 +793,7 @@
                 num++;
 
             }
-
+            document.write("<br>")
         }
 
         //sample8
@@ -805,7 +805,7 @@
                 document.write(num + ". 반복문이 실행되었습니다.<br>");
                 num++;
             } while (num <= 10);
-            document.write("<br>");
+            document.write("<br><br>");
         }
 
         //sample9

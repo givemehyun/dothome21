@@ -295,8 +295,8 @@
         <div class="code">
  <pre class="line-numbers"><code class="language-js"> {
     function func(){
-        document.write("***01. 선언적 함수***<br>");
-        document.write("01.함수가 실행되었습니다.<br><br>");
+        document.write("***01. 선언적 함수***");
+        document.write("01.함수가 실행되었습니다.");
         //실행문
     }
     func();
@@ -312,8 +312,8 @@
         <div class="code">
  <pre class="line-numbers"><code class="language-js">{
     const func = function(){
-        Document.write("***02. 익명 함수***");
-        Document.write("02.함수가 실행되었습니다.");
+        document.write("***02. 익명 함수***");
+        document.write("02.함수가 실행되었습니다.");
     }
 }
 </code></pre>
@@ -332,7 +332,11 @@
         document.write(str);
     }
     func("함수가 실행되었습니다.");
-    func("함수2가 실행되었습니다.");
+
+    function func(str1,str2){
+        document.write(str1,str2);
+    }
+    func1("함수가","실행되었습니다.");
 }
 </code></pre>
         </div>
@@ -346,11 +350,11 @@
         <div class="code">
  <pre class="line-numbers"><code class="language-js">{
     function func(){
-        const str = "함수가 실행되었습니다.<br><br>";
+        const str = "함수가 실행되었습니다.";
         return str;
     }
     
-    document.write("***04. 리턴값 함수***<br>");
+    document.write("***04. 리턴값 함수***");
     document.write(func());
 }
 
@@ -585,19 +589,19 @@
         <h2>16.재귀 함수  <span class="dot"></span></h2>
         <div class="code">
  <pre class="line-numbers"><code class="language-js">{
-    document.write("***16. 재귀 함수  ***<br>");
+    document.write("***16. 재귀 함수  ***");
 
     // function func(){
-    //     document.write("함수가 실행되었습니다.<br>");
+    //     document.write("함수가 실행되었습니다.");
     //     func();
     // }
     // func();
 
     function func(num){
-        if(num <=1 ){
-            document.write("함수가 실행되었습니다.<br>");
+        if(num &lt;=1 ){
+            document.write("함수가 실행되었습니다.");
         } else {
-            document.write("함수가 실행되었습니다.<br>");
+            document.write("함수가 실행되었습니다.");
             func(num-1);
         }
     }
@@ -610,9 +614,92 @@
 <hr>
  <!-- //sample17 -->
  <div id="sample17" class="sample">
-    <h2>17.재귀 함수  <span class="dot"></span></h2>
+    <h2>17.콜백 함수  <span class="dot"></span></h2>
     <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">{
+    document.write("***17. 콜백 함수 : 반복문  ***");
+
+    function funA (){
+        document.write("함수 A가 실행되었습니다.");
+    }
+    function funB (str){
+        document.write("함수 B가 실행되었습니다.");
+        str(); //funA();
+    }
+    funB(funA);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+<!-- //sample18 -->
+ <div id="sample18" class="sample">
+    <h2>18. 콜백함수 : 반복문   <span class="dot"></span></h2>
+    <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.write("***18. 콜백함수 : 반복문   ***");
+
+    function func(){
+        document.write("함수가 실행되었습니다.");
+    }
+    function callback(str){
+        for(let i=1; i&lt;=5; i++){
+            str(i);
+        }
+    }
+    callback(func);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+<!-- //sample19 -->
+<div id="sample19" class="sample">
+    <h2>19. 콜백함수 : 동기/비동기 <span class="dot"></span></h2>
+    <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.write("<br>***19. 콜백함수 : 동기/비동기  ***<br>");
+
+    function funA(){
+        document.write("funA가 실행되었습니다.");
+        console.log("funA가 실행되었습니다.")
+    }
+    function funB(){
+        document.write("funB가 실행되었습니다.");
+        console.log("funB가 실행되었습니다.");
+    }
+    funB();
+    funA();
+}
+
+    //02. 
+    function funC(){
+        //setTimeout(function(){
+        //    console.log("funC가 실행되었습니다.");
+        //},1000)
+        
+        setTimeout(() => {
+            console.log("funC가 실행되었습니다.");
+    },1000);
+    function funD(){
+        console.log("funD가 실행되었습니다.");
+    }
+    funC();
+    funD();
+    //03
+    function funE (callback){
+        setTimeout(()=>{
+            console.log("funE가 실행되었습니다.");
+            callback();
+        }, 1000);         
+    }
+    function funF(){
+        console.log("funF가 실행되었습니다.");
+    }
+    funE(funF);
+} 
 </code></pre>
         </div>
     </div>
