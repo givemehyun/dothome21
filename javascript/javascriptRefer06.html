@@ -12,9 +12,15 @@
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        @font-face {
+       @font-face {
             font-family: 'NEXON Lv1 Gothic OTF';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
@@ -27,59 +33,84 @@
         * {
             margin: 0;
             padding: 0;
-            font-family: 'NEXON Lv1 Gothic OTF';
-            line-height: 1.6;
+            box-sizing: border-box;
         }
-
         body {
-            padding: 5%;
-            margin-bottom: 400px;
+            padding: 2%;
+            font-family: 'NEXON Lv1 Gothic OTF';
         }
-
-        h1 {
-            padding-bottom: 20px 0;
-            font-family: 'TmonMonsori';
+        ul {
+            list-style: none;
         }
-        h1 a{
-            font-family: 'TmonMonsori';
+        ol {
+            padding-left: 26px;
+        }
+        a {
+            text-decoration: none;
         }
         hr {
             margin: 5% 0;
             border-style: dashed;
-            border-color: #E6E6E6;
+            border-color: #e6e6e6;
             border-width: 0px;
             border-bottom-width: 1px;
         }
-
-        img {
-            vertical-align: top;
-            border-radius: 5px;
-            margin: 5px;
+        .title {
+            border-top: 3px solid #0e43f1;
+            border-bottom: 1px solid #0e43f1;
+            margin-bottom: 20px;
         }
-
-        ul {
-            list-style: none;
+        .title h1 a {
+            font-family: 'TmonMonsori';
+            color: #0e43f1;
+            font-size: 50px;
+            display: inline-block;
+            padding: 15px 0 12px;
+            text-transform: uppercase;
         }
-
-        a {
-            text-decoration: none;
-            color: #333;
+        .menu li {
+            display: inline;
         }
-
+        .menu li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            color: #0e43f1;
+            border: 1px dashed #0e43f1;
+            padding: 10px 30px;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 16px;
+            margin: 4px 1px;
+            box-shadow: inset 0 0 0 #0e43f1;
+            transition: all 0.4s;
+        }
+        .menu li a:hover {
+            box-shadow: inset 0 -100px 0 #0e43f1;
+            color: #fff;
+            border-style: solid;
+        }
+        .menu li.active a {
+            background: #0e43f1;
+            color: #fff;
+        }
+        .list li a { 
+            font-family: 'NEXON Lv1 Gothic OTF';
+            font-size: 14px;
+            line-height: 1.6;
+            color: #000;
+        }
         .sample {
-            border: 1px solid #E6E6E6;
             border-radius: 5px;
+            font-family: 'NEXON Lv1 Gothic OTF';
         }
-
         .sample h2 {
             position: relative;
             font-size: 16px;
-            background-color: #F2F2F2;
+            line-height: 1.4;
+            background-color: #f2f2f2;
             padding: 15px;
-            border-bottom: 1px solid #E6E6E6;
             border-radius: 5px 5px 0 0;
+            font-weight: normal;
         }
-
         .sample h2 .dot {
             width: 10px;
             height: 10px;
@@ -90,7 +121,6 @@
             right: 30px;
             top: 20px;
         }
-
         .sample h2 .dot::before {
             content: '';
             width: 10px;
@@ -101,7 +131,6 @@
             left: -15px;
             top: 0;
         }
-
         .sample h2 .dot::after {
             content: '';
             width: 10px;
@@ -112,227 +141,168 @@
             right: -15px;
             top: 0;
         }
-
-        .sample .ex {
-            padding: 20px;
-        }
-
-        .sample .ex .text {
-            margin: 10px 0;
-        }
-
-        .sample .re {
-            padding: 20px;
-            border-top: 1px solid #E6E6E6;
-        }
-
-        .sample .re a {
-            color: #333;
-            text-decoration: none;
-            border: 1px solid #333;
-            border-radius: 30px;
-            padding: 10px 30px;
-            margin: 5px;
-            display: inline-block;
-        }
-
-        .sample .re a:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .sample .problem {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-            line-height: 1.6;
-        }
-
         .sample pre {
             margin: 0 !important;
-            border-radius: 0;
-            ;
+            border-radius: 0 0 5px 5px;
         }
-
-        .sample .desc {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
-
-        .sample .desc dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-
-        .sample .desc dd {
-            padding: 3px 0 16px 0;
-            line-height: 1.6;
-        }
-
-        .sample .sam {
-            padding: 25px;
-            border-bottom: 1px solid #E6E6E6;
-        }
-
-        .sample .sam dt {
-            padding: 3px 0;
-            margin-bottom: 6px;
-        }
-
-        .sample .sam dd {
-            padding: 3px 0 16px 0;
-        }
-
-        .page{
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-        .page li {
-            display: inline;
-            list-style: none;
-        }
-        .page li a {
-            text-decoration: none;
-            color: #222;
-        }
-        .page li a:hover {
-            color: #00914b;
-        }
-        .menu li {
-            display: inline;
-        }
-        .menu li a {
+        .sample code {
             font-family: 'NEXON Lv1 Gothic OTF';
-            color: #000;
-            border: 1px dashed #000;
-            padding: 10px 30px;
-            display: inline-block;
-            border-radius: 50px;
-            font-size: 16px;
-            margin: 4px 1px;
-            transition: all 0.4s;
         }
-        .menu li a:hover{
-            box-shadow: inset 0 -100px 0 #000;
-            color: #fff;
-            border-style: solid;
-        }
-        .view {
-                padding: 20px;
-            }
         .view table {
+            border: 1px solid #e6e6e6;
             width: 100%;
-            border: 1px solid #e6e6e6; 
             text-align: center;
             vertical-align: middle;
-            border-collapse: collapse;
+        }
+        .view table td {
+            border: 1px solid #e6e6e6;
+            padding: 13px 5px 11px 5px;
         }
         .view table th {
             padding: 13px 5px 11px 5px;
-        }
-        .view table td {
-            border: 1px solid #e6e6e6; 
-            padding: 13px 5px 11px 5px;
+            border-bottom: 1px solid #e6e6e6;
+            font-weight: normal;
+            white-space: nowrap;
         }
         .view table td.result {
-            color: #fff;
             transition: all 0.3s;
-            cursor: zoom-in;
+            cursor: pointer;
+            color: #fff;
         }
         .view table td.result:hover {
             color: #000;
             background-color: #f5f5f5;
         }
+        
         @media (max-width: 800px){
-            .menu li a{
-                font-size: 12px;
+            body {
+                padding: 5%;
+                font-size: 13px;
+            }
+            #wrap {
+                margin: 0;
+                border-width: 6px;
+                border-radius: 18px;
+            }
+            #contents {
+                border-width: 6px;
+            }
+            .title {
+                border-top-width: 2px; 
+            }
+            .title h1 {
+                text-align: center;
+            }
+            .title h1 a {
+                font-size: 40px;
+            }
+            .menu {
+                text-align: center;
+            }
+            .menu li a {
+                font-size: 13px;
                 padding: 5px 20px;
             }
-            .list li{
-                line-height: 1.2;
+            .list li a {
+                font-size: 13px;
             }
-            .list a {
-                font-size: 12px;
-            }
-            .sample h2{
+            .sample h2 {
+                font-size: 13px;
                 padding: 12px 10px 10px;
-                font-size: 14px;
             }
-            .sample h2 .dot{
+            .sample h2 .dot {
                 display: none;
             }
-            .sample pre{
-                font-size: 14px;
+            .sample pre {
+                line-height: 1.2 !important;
+            }
+            .sample code {
+                font-size: 13px;
+            }
+            .view {
+                border-right: 1px solid #e6e6e6;
+                border-left: 1px solid #e6e6e6;
+                overflow: auto;
+            }
+            .view table {
+                border-left: 0px;
+                border-right: 0px;
+            }
+            .view table th,
+            .view table td {
+                white-space: nowrap;
+                font-size: 13px;
+            }
+            .view table td.result {
+                color: #bdbdbd;
+                background: #f1f1f1;
             }
         }
     </style>
 </head>
 
 <body>
-    <h1><a href="index.html">Javascript Reference</a></h1>
+    <div id="wrap">
+        <main id="contents">
+            <div class="title">
+                <h1><a href="index.html">배열 객체</a></h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
+                    <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
+                    <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
+                    <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascriptRefer05.html">문자열 객체</a></li>
+                    <li class="active"><a href="javascriptRefer06.html">배열 객체</a></li>
+                    <li><a href="javascriptRefer07.html">날짜 객체</a></li>
+                    <li><a href="javascriptRefer08.html">수학 객체</a></li>
+                    <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
+                    <li><a href="javascriptRefer10.html">요소 객체</a></li>
+                    <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascriptRefer12.html">샘플</a></li>
+                    <li><a href="javascriptRefer13.html">알고리즘</a></li>
+                </ul>
+            </nav>
 
-    <ul class="page">
-            <li><a href="../refer-html/index.html">HTML</a></li>
-            <li><a href="../refer-css/index.html">CSS</a></li>
-            <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
-    </ul>
-    <nav class="menu">
-        <ul>
-            <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
-            <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
-            <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
-            <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
-        </ul>
-        <ul>
-            <li><a href="javascriptRefer05.html">문자열 객체</a></li>
-            <li><a href="javascriptRefer06.html">배열 객체</a></li>
-            <li><a href="javascriptRefer07.html">날짜 객체</a></li>
-            <li><a href="javascriptRefer08.html">수학 객체</a></li>
-            <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
-            <li><a href="javascriptRefer10.html">요소 객체</a></li>
-            <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
-        </ul>
-        <ul>
-            <li><a href="javascriptRefer12.html">샘플</a></li>
-            <li><a href="javascriptRefer13.html">알고리즘</a></li>
-            
-        </ul>
-    </nav>
-    <h2 class="mt20">배열 객체</h2>
-    <ul class="list">
-        <li><a href="#sample01">01. 배열 메서드 : length : 배열 길이 구하기 : 반환 (숫자)</a></li>
-        <li><a href="#sample02">02. 배열 메서드 : join() : 배열 요소 결합하기 (문자열)</a></li>
-        <li><a href="#sample03">03. 배열 메서드 : push() : 배열 마지막 요소에 추가하기 : 반환(숫자)</a></li>
-        <li><a href="#sample03">03. 배열 메서드 : unshift() : 배열 처음 요소에 추가하기 :반환 (숫자)</a></li>
-        <li><a href="#sample04">04. 배열 메서드 : shift() : 배열 첫 요소 삭제하기 :반환 (삭제된 요소)</a></li>
-        <li><a href="#sample04">04. 배열 메서드 : pop() : 배열 마지막 요소에 삭제하기 :반환 (삭제된 요소)</a></li>
-        <li><a href="#sample05">05. 배열 메서드 : indexOf() : 배열 요소 검색하기 : 반환(숫자)</a></li>
-        <li><a href="#sample05">05. 배열 메서드 : lastIndexOf() : 배열 요소  끝에서 검색하기 : 반환(숫자)</a></li>
-        <li><a href="#sample05">05. 배열 메서드 : includes() : 배열 요소 검색하기 : 반환(불린)</li>
-        <li><a href="#sample06">06. 배열 메서드 : reverse(): 배열 요소의 순서를 반대로 정렬할 때 : 반환 (불린)</a></li>
-        <li><a href="#sample06">06. 배열 메서드 : sort(): 배열 요소의 정렬할 때 : 반환 (배열)</a></li>
-        <li><a href="#sample07">07. 배열 메서드 : concat(): 배열 요소를 결합할 때 : 반환 (배열)</a></li>
-        <li><a href="#sample08">08. 배열 메서드 : slice(): 배열 요소를 다른 요소 변경할 때 : 반환 (배열)</a></li>
-        <li><a href="#sample09">09. 배열 메서드 : splice(): 배열 요소를 다른 요소 변경할 때 : 반환 (배열)</a></li>
-        <li><a href="#sample0">10. 배열 메서드 : find() : 배열 요소 검색하기 : 반환(요소)</a></li>
-        <li><a href="#sample0">10. 배열 메서드 : findIndex() : 배열 첫 요소 검색하기 : 반환(요소)</li>
-        <li><a href="#sample0">11. 배열 메서드 : filter : 조건에 만족하는 배열 요소 검색하기: 반환(요소)</li>
-        <li><a href="#sample0">12. 배열 메서드 : map() : 배열 요소를 추출하여 새로운 배열로 만들기 : 반환(결괏값)</a></li>
-        <li><a href="#sample0">13. 배열 메서드 : reduce() : 배열 요소를 하나로 만들기 : 반환(결괏값)</a></li>
-        <li><a href="#sample0">13. 배열 메서드 : reduceRight() : 배열 요소를 하나로 만들기 : 반환(결괏값)</a></li>
-        <li><a href="#sample0">14. 배열 메서드 : Arrat.from() : 배열로 변환하기 : 반환(배열)</a></li>
-    </ul>
+            <hr>
 
-    <h2 class="mt20">배열 메서드 샘플</h2>
-    <ul class="list">
-        <li><a href="javascriptsample602-1.html">01. chatAt()를 이용한 CSS 속성 첫 글자 검색하기</a></li>
-        <li><a href="javascriptsample602-2.html">02. find()를 이용한 CSS 속성 검색하기 </a></li>
-    </ul>
-    <hr>
+            <div class="list">
+                <ol>
+                    <li><a href="#sample01">배열 속성 : length : 배열 길이 구하기 : 반환(숫자)</a></li>
+                    <li><a href="#sample02">배열 메서드 : join() : 배열 요소 문자열 결합하기 : 반환(문자열)</a></li>
+                    <li><a href="#sample03">배열 메서드 : push() : 배열 마지막 요소에 추가하기 : 반환(숫자)</a></li>
+                    <li><a href="#sample03">배열 메서드 : unshift() : 배열 처음 요소에 추가하기 : 반환(숫자)</a></li>
+                    <li><a href="#sample04">배열 메서드 : shift() : 배열 첫 요소 삭제하기 : 반환(삭제된 요소)</a></li>
+                    <li><a href="#sample04">배열 메서드 : pop() : 배열 마지막 요소에 삭제하기 : 반환(삭제된 요소)</a></li>
+                    <li><a href="#sample05">배열 메서드 : indexOf() : 배열 요소 검색하기 : 반환(숫자)</a></li>
+                    <li><a href="#sample05">배열 메서드 : lastIndexOf() : 배열 요소 끝에서 검색하기 : 반환(숫자)</a></li>
+                    <li><a href="#sample05">배열 메서드 : includes() : 배열 요소 검색하기 : 반환(불린)</a></li>
+                    <li><a href="#sample07">배열 메서드 : reverse() : 배열 요소의 순서를 반대로 정렬할 때 : 반환(배열)</a></li>
+                    <li><a href="#sample07">배열 메서드 : sort() : 배열 요소를 정렬할 때 : 반환(배열)</a></li>
+                    <li><a href="#sample08">배열 메서드 : concat() : 배열 요소를 결합할 때 : 반환(배열)</a></li>
+                    <li><a href="#sample09">배열 메서드 : slice() : 배열 요소를 다른 요소로 변경할 때 : 반환(배열)</a></li>
+                    <li><a href="#sample10">배열 메서드 : splice() : 배열 요소를 다른 요소로 변경할 때 : 반환(배열)</a></li>
+                    <li><a href="#sample06">배열 메서드 : find() : 배열 요소 검색하기 : 반환(요소)</a></li>
+                    <li><a href="#sample06">배열 메서드 : findIndex() : 배열 첫 요소 검색하기 : 반환(요소)</a></li>
+                    <li><a href="#sample11">배열 메서드 : filter() :  조건에 만족하는 배열 요소 검색하기 : 반환(배열)</a></li>
+                    <li><a href="#sample12">배열 메서드 : map() :  배열 요소 추출하여 새로운 배열 만들기 : 반환(배열)</a></li>
+                    <li><a href="#sample13">배열 메서드 : reduce() : 배열 요소 하나로 정리하기  : 반환(결과값)</a></li>
+                    <li><a href="#sample13">배열 메서드 : reduceRight() : 배열 요소 하나로 정리하기  : 반환(결과값)</a></li>
+                    <li><a href="#sample14">배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</a></li>
+                </ol>
+            </div>
+
+            <hr>
+
 
     <!-- sample01-->
     <div id="sample01" class="sample">
-        <h2>01. 문자열 메서드 : 문자열 결합 / 템플릿 문자열 <span class="dot"></span></h2>
+        <h2>01. 배열 메서드 : length / 배열 길이 구하기 <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -374,6 +344,7 @@
 </code></pre>
         </div>
     </div>
+    <hr>
     <!-- sample02-->
     <div id="sample02" class="sample">
         <h2>02. 배열 메서드 : 배열 요소 결합하기 : 반환 (문자열) <span class="dot"></span></h2>
@@ -421,6 +392,7 @@
                 </tbody>
             </table>
         </div>
+
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, 300 ,400, 500];
@@ -444,6 +416,7 @@
 </code></pre>
         </div>
     </div>
+    <hr>
    <!-- sample03-->
    <div id="sample03" class="sample">
     <h2>03. 배열 메서드 : unshift() / push() : 배열 요소에 추가하기 :반환 (숫자) <span class="dot"></span></h2>
@@ -502,6 +475,7 @@
 </code></pre>
     </div>
 </div>
+<hr>
 <!-- sample04-->
 <div id="sample03" class="sample">
     <h2>04. 배열 메서드 : shift() : 배열 첫 요소 삭제하기 :반환 (삭제된 요소) <span class="dot"></span></h2>
@@ -560,6 +534,7 @@
 }
 </code></pre>
 </div>
+<hr>
 <!-- sample05-->
 <div id="sample05" class="sample">
     <h2>05. 배열 메서드 : shift() : 배열 첫 요소 삭제하기 :반환 (삭제된 요소) <span class="dot"></span></h2>
@@ -608,6 +583,7 @@
             </tbody>
         </table>
     </div>
+    <hr>
     <div class="code">
         <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
@@ -635,6 +611,7 @@
 </code></pre>
     </div>
 </div>
+<hr>
 <!-- sample06-->
 <div id="sample06" class="sample">
     <h2>06.배열 메서드 : reverse() / sort() : 배열 요소 순서 정할 때 <span class="dot"></span></h2>
@@ -714,6 +691,7 @@
 </code></pre>
     </div>
 </div>
+<hr>
 <div id="sample07" class="sample">
     <h2>07. concat(): 펄침 연산자 : 배열 요소를 결합할 때 : 반환 (배열) <span class="dot"></span></h2>
     <div class="view">
@@ -768,6 +746,7 @@
 </code></pre>
     </div>
 </div>
+<hr>
 <div id="sample08" class="sample">
     <h2>08. 배열 메서드 : slice(): 배열 요소를 다른 요소 변경할 때 : 반환 (배열)<span class="dot"></span></h2>
     <div class="view">
@@ -827,6 +806,7 @@
             </tbody>
         </table>
     </div>
+    <hr>
     <div class="code">
         <pre class="line-numbers"><code class="language-js">{
     const arrNum1 = [100, 200, 300, 400, 500];
@@ -858,6 +838,7 @@
 </code></pre>
     </div>
 </div>
+<hr>
 <div id="sample09" class="sample">
     <h2>09. 배열 메서드 : splice(): 배열 요소를 다른 요소 변경할 때 : 반환 (배열)<span class="dot"></span></h2>
     <div class="view">
@@ -942,6 +923,7 @@
 </code></pre>
     </div>
 </div>
+<hr>
 <!-- sample11 -->
 <div id="sample10" class="sample">
     <h2>10. 배열 메서드 : flter <span class="dot"></span></h2>
@@ -1009,6 +991,7 @@
 </code></pre>
     </div>
 </div>
+<hr>
 <!-- sample11 -->
 <div id="sample11" class="sample">
     <h2>11. 배열 메서드 : flter <span class="dot"></span></h2>
@@ -1075,6 +1058,7 @@
 </code></pre>
     </div>
 </div>
+<hr>
 <!-- sample12 -->
 <div id="sample11" class="sample">
     <h2>12. 배열 메서드 : flter <span class="dot"></span></h2>
@@ -1157,6 +1141,7 @@
 </code></pre>
     </div>
 </div>
+<hr>
 <!-- sample13 -->
 <div id="sample11" class="sample">
     <h2>13. 배열 메서드 : reduce() : 배열 요소를 하나로 만들기 : 반환(결과값) <span class="dot"></span></h2>
@@ -1250,6 +1235,7 @@
 </code></pre>
     </div>
 </div>
+<hr>
 <!-- sample14 -->
 <div id="sample11" class="sample">
     <h2>14. 배열 메서드 : Array.from() <span class="dot"></span></h2>
