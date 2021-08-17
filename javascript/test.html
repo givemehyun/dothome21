@@ -8,158 +8,110 @@
 </head>
 <body>
     <script>
-        //변수 : 데이터 저장소
-        //100, 200, 300 변수에 저장을 출력
-    {
-        let x = 100;
-        let y = 200;
-        let z = 300;
+       //선언적 함수
+       function func1(){
+           document.write("선언적 함수 <br>");
+       }
+       func1();
+       //익명 함수
+       const func2 = function(){
+           document.write("익명함수<br>");
+       }
+       func2();
+       //매개변수 함수 
+       function func3(text){
+           document.write(text);
+       }
+       func3("매개변수 함수<br>");
 
-        document.write(x);
-        document.write(y);
-        document.write(z);
-        document.write("<br><br>");
-    }
-        //배열
-        //100, 200 , 300 변수에 저장을 출력
-        {
-            const arr = new Array;[100, 200, 300]; 
-            
-            document.write(arr[0], "<br>");
-            document.write(arr[1], "<br>");
-            document.write(arr[2], "<br><br>");
-           
-        }
-        //객체
-        //100, 200, 300 변수에 저장을 출력
-        {
-            const obj = {a:100, b:200, c:300};
-           
-            document.write(obj.a);
-            document.write(obj.b);
-            document.write(obj.c);
-            document.write("<br><br>"); 
-               
+       //리턴값 함수
+       function func4(){
+           const text = "리턴값 함수";
+           return text; 
+       }
+       document.write(func4());
 
+       func5 = () => {
+           document.write("화살표 함수 : 선언적 함수 <br>");
+       }
+       func5();
+
+       const func6 = () => {
+           document.write("화살표 함수 : 익명함수 <br>");
+       }
+       func6();
+
+       func7 = () => {
+          let str = "화살표 함수 : 리턴값 함수<br>";
+          return str;
+       }
+       document.write(func7());
+       
+       const func8 = (str) => {
+           return str; 
+       }
+       document.write(func8("화살표 함수 : 익명함수 + 매개변수 + 리턴값 <br>"));
+
+       const func9 = str => {
+           return str; 
+       }
+       document.write(func9("화살표 함수 : 익명함수 + 매개변수 + 리턴값 <br>"));
+
+       const func10 = str => str; 
+
+       document.write(func10("화살표 함수 : 익명함수 + 매개변수 + 리턴값 <br>"));
+
+       func11 = str => str; 
+
+        document.write(func11("화살표 함수 : 익명함수 + 매개변수 + 리턴값 <br>"));
+
+        function func12(str1, str2){
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
         }
-        //반복문
-        //for문을 이용해서 1-50까지 출력
-        {
-            for(let i = 1; i<= 50; i++ ); {
-                document.write(i);
-                document.write("<br><br>");
-            }
+        func12("함수","실행");
+
+        func13 = (str1, str2) => {
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
         }
+        func13("함수","실행");
+
+        func14 = (str1, str2) => {
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
+        }
+        const a = "함수"; 
+        const b = "실행"; 
+
+        func14(a,b);
+
+        func15 = (str1, str2) => {
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
+        }
+        const c = ["함수","실행"]
         
+        func15(c[0], c[1]);
+
+        func16 = (str1, str2) => {
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
+        }
+        const d = [{a:"함수"},{b:"실행"}];
         
-        //반복문
-        //for문을 이용해서 50-1까지 출력
-        {
-            for(let i = 50; i>=1; i--);
-                document.write(i);
-                document.write("<br><br>");
-     
+        func16(d[0].a, d[1].b);
+
+        func17 = (str1, str2) => {
+            document.write(`${str1}가 ${str2}되었습니다.<br>`);
         }
-     
-        //반복문
-        //for문을 이용해서 1-50까지 출력(짝수)
-        {
-            for(let i = 1; i<=50; i+=2){
-                if(i%2 ==0){
-                    document.write(i);
-                }
-            } document.write("<br><br>");
-        }
+        const e = {a:"함수", b:"실행"};
+        
+        func17(e.a, e.b);
 
-
-        //반복문
-        //for문을 이용해서 1-50까지 출력(홀수)
-       {
-           for (let i = 1; i<=50; i+2){
-               if( i%2 ==1 ){
-                   document.write(i);
-               }
-           }document.write("<br><br>");
-       }
-       //반복문
-       //구구단 8단 
-       {
-        for(var i=8; i<=9; i++){
-                for(var j=1; j<=9; j++){
-                    var sum = i * j;
-                    document.write(i + " * " + j + " = " + sum,"<br>");
-                }
-
-             }
-        }
-       //반복문
-       //구구단 5~8단
-       {
-           for(var i = 5; i<=8; i++){
-               for (var j=1; j<=9; j++);
-               var sum = i * j;
-               document.write(i+ "*"+j + "=" + sum, "<br>");
-           }
-       }
-       //배열의 개수 구하기 
-       {
-           const num = [100, 200, 300, 400, 500];
-
-           document.write(num.length, "<br><br>");
-       }
-       //배열의 3번째 값만 출력
-       {
-            const num = [100, 200, 300, 400, 500];
-
-            document.write(num[2]);
-       }
-       //for문을 이용해서 모든 값을 출력
-       {
-        const num = [100, 200, 300, 400, 500]
-
-        for(let i = 0; i<num.length; i++ ){
-            document.write(num[i], "<br><br>")
-        }
-       }
-       //forEach문을 이용해서 모든 값을 출력
-       {
-        const num = [100, 200, 300, 400, 500];
-
-        document.write(num[0]);
-        document.write(num[1]);
-        document.write(num[2]);
-        document.write(num[3]);
-        document.write(num[4]);
-
-        for( let i = 0; i<num.length; i++){
-            document.write(num[i]);
-        }
-       }
-
-       {
-           //"함수가 실행되었습니다." (선언적 함수);
-            function func(){
-                document.write("함수가 실행되었습니다.<br>")
+        const f = {
+            a: "함수",
+            b: "실행",
+            result : () => {
+                document.write(`${f.a}가 ${f.b}되었습니다.<br>`);
             }
-            func();
-           //"함수가 실행되었습니다." (익명 함수);
-            const func2 = function() {
-                document.write(str);
-            }
-            func2("함수가 실행되었습니다.<br>")
-            func2("함수가 실행되다.<br>")
-            func2("함수가 실행.<br>")
-           //"함수가 실행되었습니다." (매개변수  함수);
-            function func(str) {
-                document.write("함수가 실행되었습니다.<br>")
-            }
-           //"함수가 실행되었습니다." (리턴값 함수);
-           function func3(){
-               const str = "함수가 실행되었습니다.<br>"
-               return str;
-           }
-           document.write(func3);
-       }
+        }
+        f.result();
     </script>
 </body>
 </html>
