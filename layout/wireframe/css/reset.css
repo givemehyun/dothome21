@@ -55,5 +55,11 @@ ol,
 ul {
     list-style: none;
 }
-
+/* style 초기화 */
+strong{
+    font-weight: normal;
+}
+em{
+    font-style: normal;
+}
 
