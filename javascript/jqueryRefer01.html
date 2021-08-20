@@ -540,7 +540,54 @@
         <a href="#c" class="jbtn1-5">클릭하면 전체 태그(*)를 선택합니다.</a>
     </div>
     <div class="code">
-        <pre class="line-numbers"><code class="language-js">
+        <pre class="line-numbers"><code class="language-js">{
+            const j1reset1 = document.querySelector(".jreset1")
+            const jbtn1_1 = document.querySelector(".jbtn1-1")
+            const jbtn1_2 = document.querySelector(".jbtn1-2")
+            const jbtn1_3 = document.querySelector(".jbtn1-3")
+            const jbtn1_4 = document.querySelector(".jbtn1-4")
+            const jbtn1_5 = document.querySelector(".jbtn1-5")
+        
+            jbtn1_1.addEventListener("click" , function(){
+                document.querySelector(".j1_class").classList.add("red")
+            });
+        
+            jbtn1_2.addEventListener("click" , function() {
+                // document.querySelector("#j1_id").classList.add("red")
+                document.getElementById("j1_id").classList.add("red")
+            });
+        
+            jbtn1_3.addEventListener("click", function(){
+                // document.querySelector(".jview1 li").classList.add("red")
+                // document.querySelectorAll(".jview1 li").classList.add("red")
+                const liList = document.querySelectorAll(".jview1 li");
+        
+                for( let i = 0; i&lt;liList.length; i++ ){
+                    liList[i].classList.add("red");
+                }
+        
+                //liList.forEach((el) =&gt; {
+                //   el.classList.add("red");
+                //});
+        
+                // for ( let i of liList ){
+                //     i.classList.add("red");
+                // }
+        
+                //for ( let i in liList ){
+                //    liList[i].classList.add("red");
+                //}
+            });
+        
+            j1reset1.addEventListener("click" , function(){
+            
+                const liList = document.querySelectorAll(".jview1 li");
+        
+                for( let i = 0; i&lt;liList.length; i++ ){
+                    liList[i].classList.remove("red");
+                }
+            });
+}
 </code></pre>
     </div>
 </div>
