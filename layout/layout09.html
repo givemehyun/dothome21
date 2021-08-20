@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,90 +7,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃 연습9</title>
     <style>
-    *{
-        padding: 0;
-        margin: 0;
-    }
-    body{
-        background-color: #e8f5e9 ;
-    }
-    #wrap{
-        margin: 0 auto;
-    }
-    header{
-        width: 100%;
-        height: 150px;
-        background-color: #c8e6c9  ;
-    }
-    main{
-        width: 100%;
-        overflow: hidden;
-    }
-    aside{
-        width: 20%;
-        height: 700px;
-        background-color: #a5d6a7;
-        float: left;
-    }
-    section{
-        width: 60%;
-        height: 700px;
-        background-color: #81c784;
-        float: left;
-    }
-    article{
-        width: 20%;
-        height: 700px;
-        background-color: #66bb6a;
-    }
-    footer{
-        width: 100%;
-        height: 150px;
-        background-color: #4caf50;
-    }
-    @media(max-width:1220px){
-        aside{
-            width: 30%;
+        * {
+            margin: 0;
+            padding: 0;
         }
-        section{
-            width: 70%;
-        }
-        article{
+        #wrap {
             width: 100%;
-            height: 300px;
+            margin: 0 auto;
         }
-    }
-    @media(max-width:800px){
-        aside{
+        header {
             width: 100%;
-            height: 300px;
+            height: 100px;
+            background-color: #e8f5e9;
         }
-        section{
+        main {
             width: 100%;
-            height: 300px;
         }
-    }
-    @media(max-width:600px){
-        aside{
-            height: 200px;
+        aside {
+            width: 20%;
+            height: 700px;
+            background-color: #c8e6c9;
+            float: left;
         }
-        section{
-            height: 200px;
+        section {
+            width: 60%;
+            height: 700px;
+            background-color: #a5d6a7;
+            float: left;
         }
-        article{
-            height: 200px;
+        article {
+            width: 20%;
+            height: 700px;
+            background-color: #81c784;
+            float: left;
         }
-        
-    }
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: #66bb6a;
+            clear: both;
+        }
+        @media (max-width: 1210px) {
+            #wrap {
+                width: 100%;
+            }
+            aside {
+                width: 30%;
+            }
+            section {
+                width: 70%;
+            }
+            article {
+                width: 100%;
+                height: 400px;
+                float: none;
+                clear: both;
+            }
+        }
+        @media (max-width: 800px) {
+            #wrap {
+                width: 100%;
+            }
+            aside {
+                width: 100%;
+                height: 300px;
+                float: none;
+            }
+            section {
+                width: 100%;
+                height: 300px;
+                float: none;
+            }
+            article {
+                width: 100%;
+                height: 300px;
+                float: none;
+            }
+        }
+        @media (max-width: 600px) {
+            #wrap {
+                width: 100%;
+            }
+            aside {
+                width: 100%;
+                height: 200px;
+                float: none;
+            }
+            section {
+                width: 100%;
+                height: 200px;
+                float: none;
+            }
+            article {
+                width: 100%;
+                height: 200px;
+                float: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <div id="wrap">
+    <div id = "wrap">
         <header></header>
         <main>
             <aside></aside>
             <section></section>
-            <artcle></artcle>
+            <article></article>
         </main>
         <footer></footer>
     </div>
