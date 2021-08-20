@@ -31,6 +31,7 @@
             font-style: normal;
         }
         * {
+            word-break: break-all;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -149,6 +150,9 @@
         .sample code {
             font-family: 'NEXON Lv1 Gothic OTF';
         }
+        .view{
+            padding: 20px;
+        }
         .view table {
             border: 1px solid #e6e6e6;
             width: 100%;
@@ -239,7 +243,6 @@
                 background: #f1f1f1;
             }
         }
-        
     </style>
 </head>
 
@@ -1573,7 +1576,6 @@
             document.querySelector(".sample09_Q5").innerHTML = str5;
             document.querySelector(".sample09_M5").innerHTML = ".split(/&\?/)";
             document.querySelector(".sample09_R5").innerHTML = text5;
-            console.log(text5)
         }
         //10.문자열 : padStart(전체길이, 추가 문자열)/padEnd
         {
@@ -1662,19 +1664,19 @@
             document.querySelector(".sample11_R2").innerHTML = url2;
 
             const text3 = "https://givemehyun.co.kr/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
-            const url3 = decodeURI(text3);
+            const url3 = encodeURI(text3);
 
             document.querySelector(".sample11_N3").innerHTML = "3";
             document.querySelector(".sample11_Q3").innerHTML = text3;
-            document.querySelector(".sample11_M3").innerHTML = "decodeURI();";
+            document.querySelector(".sample11_M3").innerHTML = "encodeURI();";
             document.querySelector(".sample11_R3").innerHTML = url3;
 
             const text4 = "https%3A%2F%2Fgivemehyun.co.kr%2F%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
-            const url4 = decodeURIComponent(text4);
+            const url4 = encodeURIComponent(text4);
 
             document.querySelector(".sample11_N4").innerHTML = "4";
             document.querySelector(".sample11_Q4").innerHTML = text4;
-            document.querySelector(".sample11_M4").innerHTML = "decodeURI();";
+            document.querySelector(".sample11_M4").innerHTML = "encodeURI();";
             document.querySelector(".sample11_R4").innerHTML = url4;
         }
     </script>
