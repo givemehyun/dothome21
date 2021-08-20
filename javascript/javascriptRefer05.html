@@ -1203,14 +1203,15 @@
     document.querySelector(".sample11_R2").innerHTML = url2;
 
     const text3 = "https://givemehyun.co.kr/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
-    const url3 = decodeURI(text3);
+    const url3 = encodeURI(text3);
 
-    document.querySelector(".sample11_R3").innerHTML = url3;
+    document.querySelector(".sample11_N3").innerHTML = "3";
+
 
     const text4 = "https%3A%2F%2Fgivemehyun.co.kr%2F%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
-    const url4 = decodeURIComponent(text4);
+    const url4 = encodeURIComponent(text4);
 
-    document.querySelector(".sample11_R4").innerHTML = url4;
+    document.querySelector(".sample11_N4").innerHTML = "4";
 }
 </code></pre>
     </div>
@@ -1652,7 +1653,7 @@
 
             document.querySelector(".sample11_N1").innerHTML = "1";
             document.querySelector(".sample11_Q1").innerHTML = text;
-            document.querySelector(".sample11_M1").innerHTML = "encodeURI();";
+            document.querySelector(".sample11_M1").innerHTML = ".encodeURI();";
             document.querySelector(".sample11_R1").innerHTML = url;
 
             const text2 = "https://givemehyun.co.kr/자바스크립트.html";
@@ -1660,7 +1661,7 @@
 
             document.querySelector(".sample11_N2").innerHTML = "2";
             document.querySelector(".sample11_Q2").innerHTML = text2;
-            document.querySelector(".sample11_M2").innerHTML = "encodeURIComponent();";
+            document.querySelector(".sample11_M2").innerHTML = ".encodeURIComponent();";
             document.querySelector(".sample11_R2").innerHTML = url2;
 
             const text3 = "https://givemehyun.co.kr/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
@@ -1668,7 +1669,7 @@
 
             document.querySelector(".sample11_N3").innerHTML = "3";
             document.querySelector(".sample11_Q3").innerHTML = text3;
-            document.querySelector(".sample11_M3").innerHTML = "encodeURI();";
+            document.querySelector(".sample11_M3").innerHTML = ".decodeURI();";
             document.querySelector(".sample11_R3").innerHTML = url3;
 
             const text4 = "https%3A%2F%2Fgivemehyun.co.kr%2F%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
@@ -1676,7 +1677,7 @@
 
             document.querySelector(".sample11_N4").innerHTML = "4";
             document.querySelector(".sample11_Q4").innerHTML = text4;
-            document.querySelector(".sample11_M4").innerHTML = "encodeURI();";
+            document.querySelector(".sample11_M4").innerHTML = ".decodeURIComponent();";
             document.querySelector(".sample11_R4").innerHTML = url4;
         }
     </script>
