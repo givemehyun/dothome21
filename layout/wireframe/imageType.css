@@ -1,0 +1,85 @@
+/* imageType */
+body {
+    background: #f3f3f3;
+}
+.imageType {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+/* imageType01 */
+.imageType01{
+    font-family: 'GmarketSans';
+    padding: 60px 0;
+}
+.imageType01 h2{
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 7px;
+}
+.imageType01 .img{
+}
+.imageType01 .img-card{
+    margin: 0 auto;
+}
+.imageType01 .box{
+    position: relative;
+    margin-bottom: 100px;
+}
+.imageType01 .image-wrap{
+    display: flex;
+    font-family: "S-core Dream";
+    justify-content: space-between; 
+    gap: 10px;
+    margin-bottom: 60px;
+}
+.imageType01 .image-wrap .image-title{
+    font-size: 30px;
+    margin-left: 45px;
+    font-weight: 700;
+    text-align: left;
+    color: #000;
+    display: inline-block;
+}
+.imageType01 .image-wrap .image-desc{
+    font-size: 14px;
+    text-align: left;
+    margin-left: 45px;
+    margin-top: 20px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+    width: 281px;
+    height: 40px;
+}
+.imageType01 .image-wrap .image-keyword{
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    width: 77px;
+    height: 18px;
+}
+.imageType01 .image-wrap .image-keyword span{
+    padding: 5px 10px;
+    border-radius: 30px;
+    background-color: #797776;
+    width: 108px;
+    height: 33px;
+}
+/* imageType02 */
+.imageType02{
+    font-family: 'GmarketSans';
+    padding: 60px 0;
+}
+.imageType02 .image-wrap{
+    display: flex;
+}
+.imageType02 h2{
+    font-size: 50px;
+    font-weight: 500;
+}
+.imageType02 .image-title{
+    font-family: "S-Core Dream";
+    font-size: 40px;
+    font-weight: 500;
+}
