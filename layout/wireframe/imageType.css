@@ -13,18 +13,14 @@ body {
     padding: 60px 0;
 }
 .imageType01 h2{
-    font-weight: 500;
+    font-weight: 600;
     font-size: 50px;
     margin-bottom: 7px;
 }
-.imageType01 .img{
-}
-.imageType01 .img-card{
-    margin: 0 auto;
-}
 .imageType01 .box{
     position: relative;
-    margin-bottom: 100px;
+    bottom: 190px;
+    right: 30px;
 }
 .imageType01 .image-wrap{
     display: flex;
@@ -35,29 +31,28 @@ body {
 }
 .imageType01 .image-wrap .image-title{
     font-size: 30px;
-    margin-left: 45px;
+    margin-left: 60px;
     font-weight: 700;
-    text-align: left;
-    color: #000;
-    display: inline-block;
+    color: #fff;
+    display: block;
 }
 .imageType01 .image-wrap .image-desc{
-    font-size: 14px;
+    font-size: 15px;
     text-align: left;
-    margin-left: 45px;
+    margin-left: 60px;
     margin-top: 20px;
     font-weight: 400;
-    color: #000;
-    display: inline-block;
-    width: 281px;
-    height: 40px;
+    color: #fff;
+    display: block;
 }
 .imageType01 .image-wrap .image-keyword{
     font-size: 15px;
     font-weight: 600;
     color: #fff;
-    width: 77px;
-    height: 18px;
+    display: block;
+    margin-top: 20px;
+    margin-left: 60px;
+
 }
 .imageType01 .image-wrap .image-keyword span{
     padding: 5px 10px;
@@ -74,12 +69,24 @@ body {
 .imageType02 .image-wrap{
     display: flex;
 }
+.imageType02 .image-card{
+    padding-left: 20px;
+}
 .imageType02 h2{
     font-size: 50px;
     font-weight: 500;
+    margin-left: 20px;
 }
 .imageType02 .image-title{
     font-family: "S-Core Dream";
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 42px;
+    font-weight: 600;
 }
+.imageType02 .box{
+    position: relative;
+    bottom: 200px;
+    right: 30px;
+}
+/* imageType03 */
+/* imageType03 */
+
